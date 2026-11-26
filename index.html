@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#1b2433">
+<title>Blocklands</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="game"></div>
+
+<!-- HUD -->
+<div id="hud" class="hidden">
+  <div id="crosshair"></div>
+  <div id="info"></div>
+  <div id="toast"></div>
+  <div id="hotbar"></div>
+</div>
+
+<!-- Touch controls -->
+<div id="touch" class="hidden">
+  <div id="joyBase"><div id="joyKnob"></div></div>
+  <div class="tbtn" id="tPause" title="Menu">&#10073;&#10073;</div>
+  <div class="tbtn" id="tInv" title="Inventory">&#9638;</div>
+  <div class="tbtn" id="tFly" title="Fly">&#10148;</div>
+  <div class="tbtn big" id="tBreak" title="Break">&#9935;</div>
+  <div class="tbtn big" id="tPlace" title="Place">&#9632;</div>
+  <div class="tbtn big" id="tJump" title="Jump">&#9650;</div>
+  <div class="tbtn" id="tDown" title="Descend">&#9660;</div>
+</div>
+
+<!-- Inventory -->
+<div id="inventory" class="hidden">
+  <div class="panel">
+    <div class="panel-head">
+      <h2>Inventory</h2>
+      <button id="invClose" class="xbtn" aria-label="Close">&times;</button>
+    </div>
+    <p class="hint">Tap a slot, then another slot to swap or merge stacks.</p>
+    <div id="invGrid" class="grid"></div>
+    <div class="sep"></div>
+    <div id="invHotbar" class="grid"></div>
+    <h3>Crafting</h3>
+    <div id="recipes"></div>
+  </div>
+</div>
+
+<!-- Title / pause menu -->
+<div id="menu">
+  <div class="panel menu-panel">
+    <h1>Blocklands</h1>
+    <p class="sub" id="menuSub">A procedurally generated voxel sandbox</p>
+    <button id="playBtn" class="primary">Play</button>
+    <button id="newBtn">New World</button>
+    <div class="controls desktop-only">
+      <div><b>WASD</b> move</div><div><b>Mouse</b> look</div>
+      <div><b>Space</b> jump / fly up</div><div><b>Shift</b> fly down</div>
+      <div><b>Ctrl</b> sprint</div><div><b>F</b> toggle fly</div>
+      <div><b>Left click</b> break</div><div><b>Right click</b> place</div>
+      <div><b>1-9 / wheel</b> select</div><div><b>E</b> inventory</div>
+      <div><b>T</b> skip time</div><div><b>Esc</b> pause</div>
+    </div>
+    <div class="controls touch-only">
+      <div><b>Left side</b> move</div><div><b>Right side</b> look</div>
+      <div><b>&#9650;</b> jump</div><div><b>&#9935;</b> break (hold)</div>
+      <div><b>&#9632;</b> place</div><div><b>&#10148;</b> fly</div>
+    </div>
+    <p class="seed" id="seedLabel"></p>
+  </div>
+</div>
+
+<div id="error" class="hidden"></div>
+
+<script src="lib/three.min.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
