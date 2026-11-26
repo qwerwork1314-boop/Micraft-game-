@@ -4,9 +4,13 @@ A browser-playable, procedurally generated 3D voxel sandbox built with [Three.js
 
 ## Play
 
+**Live site:** https://qwerwork1314-boop.github.io/Micraft-game-/
+
+On iPhone, open the link in Safari, hold the phone sideways, and tap **Play**. For a full-screen game, tap Share and then **Add to Home Screen**, and launch it from the new icon.
+
 - **Easiest:** open `index.html` directly in a browser (double-click it). No build step or server needed.
 - **Or serve it:** `python3 -m http.server` in this folder, then visit http://localhost:8000.
-- **Online:** enable GitHub Pages for this repo (Settings → Pages → deploy from branch, root folder).
+- **Online:** the workflow in `.github/workflows/pages.yml` publishes the game to GitHub Pages on every push to `main`. This needs a one-time setting: Settings → Pages → Source: **GitHub Actions**.
 
 ## Features
 

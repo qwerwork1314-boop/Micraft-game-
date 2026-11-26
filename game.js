@@ -1179,5 +1179,6 @@ showMenu(false);
 frame();
 
 // Exposed for debugging / automated tests
+window.__icon = blockIcon;
 window.__game = { player, getBlock, setBlock, chunks, slots: () => slots, state: () => state, resumePlay, breakBlock, placeBlock, raycast, setTime: (t) => { timeOfDay = t; } };
 })();
