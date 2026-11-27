@@ -155,15 +155,16 @@ final class HealthKitService: @unchecked Sendable {
     }
 
     static func sleepStage(_ raw: Int) -> SleepStage? {
-        guard let v = HKCategoryValueSleepAnalysis(rawValue: raw) else { return nil }
-        switch v {
-        case .inBed: return .inBed
-        case .awake: return .awake
-        case .asleepCore: return .core
-        case .asleepDeep: return .deep
-        case .asleepREM: return .rem
-        case .asleepUnspecified: return .asleepUnspecified
-        @unknown default: return .asleepUnspecified
+        // Imported C enums accept any raw value, so match explicitly and ignore unknown values
+        // instead of guessing a stage.
+        switch raw {
+        case HKCategoryValueSleepAnalysis.inBed.rawValue: return .inBed
+        case HKCategoryValueSleepAnalysis.awake.rawValue: return .awake
+        case HKCategoryValueSleepAnalysis.asleepCore.rawValue: return .core
+        case HKCategoryValueSleepAnalysis.asleepDeep.rawValue: return .deep
+        case HKCategoryValueSleepAnalysis.asleepREM.rawValue: return .rem
+        case HKCategoryValueSleepAnalysis.asleepUnspecified.rawValue: return .asleepUnspecified
+        default: return nil
         }
     }
 
