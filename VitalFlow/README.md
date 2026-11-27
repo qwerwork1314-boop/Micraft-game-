@@ -156,7 +156,7 @@ python3 scripts/build_strings.py                  # 修改界面文字后重新�
 ## 11. 测试与验证状态（诚实说明）
 
 - ✅ **VitalFlowCore 63 个单元测试**在 Linux（Swift 6.0）上已运行并全部通过：健康评分、缺失数据、重复记录、跨午夜与夏令时日期边界、睡眠重叠样本、多数据源、游戏化、助手意图识别。
-- 🔄 **iOS / watchOS 编译与模拟器测试**由 GitHub Actions macOS 运行器执行，结果见 Actions 页面（详见 `docs/FEATURE_STATUS.md` 中的最新状态）。
+- ✅ **iOS / watchOS 编译与模拟器测试**已在 GitHub Actions macOS 运行器上通过（CI 第 4 次运行）：iPhone App（含内嵌 Watch App 与两个小组件扩展）编译成功，iPhone 模拟器单元测试通过，watchOS App 单独编译成功。
 - ❌ **尚未在真机（iPhone / Apple Watch）上测试**。HealthKit 授权流程、后台推送、WatchConnectivity 同步、体能训练会话、小组件和复杂功能在真机上的表现都需要你通过 TestFlight 安装后验证。
 
 ## 12. 许可

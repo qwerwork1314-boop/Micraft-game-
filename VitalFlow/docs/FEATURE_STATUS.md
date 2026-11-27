@@ -71,7 +71,7 @@
 |---|---|
 | XcodeGen project (iOS, watchOS, 2 widget extensions, unit tests) | 🟢 |
 | HealthKit / App Group entitlements, privacy usage strings (localized) | 🟢 |
-| GitHub Actions CI (Linux core tests, macOS build + simulator tests) | see Actions tab |
+| GitHub Actions CI (Linux core tests, macOS build + simulator tests) | ✅ passing (run #4: iOS app + watch app + widgets compile, simulator tests pass, watchOS build passes, Linux core tests pass, localization check passes) |
 | TestFlight workflow (API-key automatic signing, upload) | 🟡 — needs your Apple Developer secrets; not yet run |
 
 ## Planned / not implemented
