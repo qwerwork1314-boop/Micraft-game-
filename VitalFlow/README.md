@@ -5,6 +5,7 @@ VitalFlow 是一款用 **Swift / SwiftUI** 编写的原生 iPhone + Apple Watch 
 > ⚠️ **重要声明**：VitalFlow 的所有评分都是实验性健康估算，未经临床验证，不是医学测量，也不能用于诊断、治疗或预防任何疾病。
 
 - 本项目放在仓库的 `VitalFlow/` 目录中，与仓库里原有的 Blocklands 游戏完全独立（游戏文件没有被修改）。如何把它搬到独立仓库见 [第 9 节](#9-迁移到独立的-github-仓库)。
+- 繁體中文：[`README.zh-Hant.md`](README.zh-Hant.md) · English: [`README.en.md`](README.en.md)
 - 算法公式与局限：[`docs/ALGORITHMS.md`](docs/ALGORITHMS.md)
 - 隐私政策：[`docs/PRIVACY.md`](docs/PRIVACY.md)
 - 功能状态（已实现 / 已测试 / 未测试 / 计划中）：[`docs/FEATURE_STATUS.md`](docs/FEATURE_STATUS.md)

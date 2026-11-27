@@ -54,7 +54,11 @@ final class AppModel {
     var profile: ScoringProfile { ScoringProfile(sleepNeed: settings.sleepNeedHours * 3600, age: age) }
     var history: [DailyMetrics] { bundle?.history ?? [] }
     var isDemo: Bool { bundle?.isDemo ?? settings.demoMode }
-    var language: AssistantLanguage { AssistantLanguage.from(localeIdentifier: Locale.preferredLanguages.first ?? "en") }
+    /// Follows the language the app UI is actually shown in (including the per-app language
+    /// chosen in iOS Settings), so Coach answers match the rest of the interface.
+    var language: AssistantLanguage {
+        AssistantLanguage.from(localeIdentifier: Bundle.main.preferredLocalizations.first ?? Locale.preferredLanguages.first ?? "en")
+    }
 
     private var provider: HealthDataProvider {
         settings.demoMode ? DemoDataProvider() : HealthKitDataProvider()
