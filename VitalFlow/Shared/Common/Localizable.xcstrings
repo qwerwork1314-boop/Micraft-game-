@@ -139,6 +139,75 @@
         }
       }
     },
+    "AI briefing": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI briefing"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI 简报"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI 簡報"
+          }
+        }
+      }
+    },
+    "AI coach (Apple Intelligence)": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI coach (Apple Intelligence)"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI 教练（Apple 智能）"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI 教練（Apple Intelligence）"
+          }
+        }
+      }
+    },
+    "AI coach · Apple Intelligence on-device": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI coach · Apple Intelligence on-device"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI 教练 · Apple 智能（设备端）"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI 教練 · Apple Intelligence（裝置端）"
+          }
+        }
+      }
+    },
     "API key stored in Keychain": {
       "extractionState": "manual",
       "localizations": {
@@ -300,6 +369,29 @@
         }
       }
     },
+    "Answers are generated privately on your iPhone from your own data. Nothing is sent to the internet.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Answers are generated privately on your iPhone from your own data. Nothing is sent to the internet."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "回答由你的 iPhone 根据你自己的数据私密生成，不会发送到互联网。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "回答由你的 iPhone 根據你自己的資料私密產生，不會傳送到網際網路。"
+          }
+        }
+      }
+    },
     "Anthropic API key": {
       "extractionState": "manual",
       "localizations": {
@@ -323,6 +415,144 @@
         }
       }
     },
+    "Apple Intelligence is available.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Intelligence is available."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple 智能可用。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Intelligence 可以使用。"
+          }
+        }
+      }
+    },
+    "Apple Intelligence is still downloading. The AI coach will be ready soon.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Intelligence is still downloading. The AI coach will be ready soon."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple 智能仍在下载中，AI 教练很快就能使用。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Intelligence 仍在下載中，AI 教練很快就能使用。"
+          }
+        }
+      }
+    },
+    "Apple Intelligence isn't available right now. Built-in answers are used.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Intelligence isn't available right now. Built-in answers are used."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple 智能目前不可用，将使用内置回答。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Intelligence 目前無法使用，將使用內建回答。"
+          }
+        }
+      }
+    },
+    "Apple Intelligence · on-device": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Intelligence · on-device"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple 智能 · 设备端"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Intelligence · 裝置端"
+          }
+        }
+      }
+    },
+    "Ask Coach": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ask Coach"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "问教练"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "問教練"
+          }
+        }
+      }
+    },
+    "Ask Coach about this": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ask Coach about this"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "向教练询问这个"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "向教練詢問這項"
+          }
+        }
+      }
+    },
     "Ask about your trends…": {
       "extractionState": "manual",
       "localizations": {
@@ -342,6 +572,29 @@
           "stringUnit": {
             "state": "translated",
             "value": "詢問你的趨勢…"
+          }
+        }
+      }
+    },
+    "Ask for Health access again": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ask for Health access again"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "再次请求健康权限"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "再次要求健康權限"
           }
         }
       }
@@ -806,6 +1059,29 @@
         }
       }
     },
+    "Check Health connection": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check Health connection"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "检查健康连接"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "檢查健康連線"
+          }
+        }
+      }
+    },
     "Choose exactly which data types to share.": {
       "extractionState": "manual",
       "localizations": {
@@ -894,6 +1170,29 @@
           "stringUnit": {
             "state": "translated",
             "value": "結合恢復分數（65%）與最近 7 天訓練負荷相對最近 28 天的比值（35%）。"
+          }
+        }
+      }
+    },
+    "Compare my sleep this week with last week.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Compare my sleep this week with last week."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "比较我本周和上周的睡眠。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "比較我這週和上週的睡眠。"
           }
         }
       }
@@ -1009,6 +1308,29 @@
           "stringUnit": {
             "state": "translated",
             "value": "連線「健康」"
+          }
+        }
+      }
+    },
+    "Connected to Apple Health": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connected to Apple Health"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已连接 Apple 健康"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已連接 Apple 健康"
           }
         }
       }
@@ -1193,6 +1515,29 @@
           "stringUnit": {
             "state": "translated",
             "value": "每日目標"
+          }
+        }
+      }
+    },
+    "Data VitalFlow can read (last 7 days)": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Data VitalFlow can read (last 7 days)"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "VitalFlow 可读取的数据（最近 7 天）"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "VitalFlow 可讀取的資料（最近 7 天）"
           }
         }
       }
@@ -1818,6 +2163,29 @@
         }
       }
     },
+    "Exercise minutes": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Exercise minutes"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "锻炼分钟数"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "運動分鐘數"
+          }
+        }
+      }
+    },
     "Experimental wellness estimate — not a medical measurement or diagnosis.": {
       "extractionState": "manual",
       "localizations": {
@@ -1837,6 +2205,121 @@
           "stringUnit": {
             "state": "translated",
             "value": "實驗性健康估算——並非醫學測量或診斷。"
+          }
+        }
+      }
+    },
+    "Explain my Body Battery today.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Explain my Body Battery today."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解释我今天的身体电量。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解釋我今天的身體電量。"
+          }
+        }
+      }
+    },
+    "Explain my recovery score today.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Explain my recovery score today."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解释我今天的恢复分数。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解釋我今天的恢復分數。"
+          }
+        }
+      }
+    },
+    "Explain my sleep score from last night.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Explain my sleep score from last night."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解释我昨晚的睡眠评分。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解釋我昨晚的睡眠評分。"
+          }
+        }
+      }
+    },
+    "Explain my stress today.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Explain my stress today."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解释我今天的压力。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解釋我今天的壓力。"
+          }
+        }
+      }
+    },
+    "Explain my training readiness today.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Explain my training readiness today."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解释我今天的训练准备度。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解釋我今天的訓練準備度。"
           }
         }
       }
@@ -2228,6 +2711,52 @@
           "stringUnit": {
             "state": "translated",
             "value": "HRV（45%）、靜息心率（25%）、睡眠品質（20%）、呼吸頻率（5%）和手腕溫度（5%）與你自己的 28 天基線比較。需要至少 4 天的歷史資料。"
+          }
+        }
+      }
+    },
+    "Health access hasn't been requested yet": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Health access hasn't been requested yet"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "尚未请求健康权限"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "尚未要求健康權限"
+          }
+        }
+      }
+    },
+    "Health connection": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Health connection"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "健康连接"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "健康連線"
           }
         }
       }
@@ -2757,6 +3286,29 @@
           "stringUnit": {
             "state": "translated",
             "value": "中斷"
+          }
+        }
+      }
+    },
+    "It was installed without the Apple Health permission (this often happens with free sideloading). Health data can't be read in this install. Use demo data, or install through TestFlight, which keeps the permission.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "It was installed without the Apple Health permission (this often happens with free sideloading). Health data can't be read in this install. Use demo data, or install through TestFlight, which keeps the permission."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此版本安装时没有包含 Apple 健康权限（免费侧载时经常发生），因此无法读取健康数据。你可以使用演示数据，或通过 TestFlight 安装（会保留该权限）。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此版本安裝時沒有包含 Apple 健康權限（免費側載時經常發生），因此無法讀取健康資料。你可以使用示範資料，或透過 TestFlight 安裝（會保留該權限）。"
           }
         }
       }
@@ -3336,6 +3888,52 @@
         }
       }
     },
+    "No Health data found": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No Health data found"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未找到健康数据"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "找不到健康資料"
+          }
+        }
+      }
+    },
+    "No Health data yet — answers will be limited. Check Settings → Health connection.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No Health data yet — answers will be limited. Check Settings → Health connection."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "还没有健康数据——回答会受限。请查看“设置 → 健康连接”。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "還沒有健康資料——回答會受限。請查看「設定 → 健康連線」。"
+          }
+        }
+      }
+    },
     "No account, no ads, no tracking.": {
       "extractionState": "manual",
       "localizations": {
@@ -3355,6 +3953,29 @@
           "stringUnit": {
             "state": "translated",
             "value": "無需帳號，無廣告，無追蹤。"
+          }
+        }
+      }
+    },
+    "No readable Health data": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No readable Health data"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "没有可读取的健康数据"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "沒有可讀取的健康資料"
           }
         }
       }
@@ -3516,6 +4137,29 @@
           "stringUnit": {
             "state": "translated",
             "value": "裝置端助手"
+          }
+        }
+      }
+    },
+    "On-device · Apple Intelligence": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "On-device · Apple Intelligence"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设备端 · Apple 智能"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "裝置端 · Apple Intelligence"
           }
         }
       }
@@ -3980,6 +4624,29 @@
         }
       }
     },
+    "Resting energy": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resting energy"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "静息能量"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "靜態能量"
+          }
+        }
+      }
+    },
     "Resting heart rate": {
       "extractionState": "manual",
       "localizations": {
@@ -4137,6 +4804,29 @@
           "stringUnit": {
             "state": "translated",
             "value": "評分"
+          }
+        }
+      }
+    },
+    "Scores need about 4 nights of sleep with Apple Watch to learn your baseline. Until then they show “Not enough data”.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scores need about 4 nights of sleep with Apple Watch to learn your baseline. Until then they show “Not enough data”."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "评分需要约 4 晚佩戴 Apple Watch 睡眠的数据来学习你的基线，在此之前会显示“数据不足”。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "評分需要約 4 晚佩戴 Apple Watch 睡眠的資料來學習你的基線，在此之前會顯示「資料不足」。"
           }
         }
       }
@@ -4785,6 +5475,121 @@
         }
       }
     },
+    "Tap “Ask for Health access again” and allow the data types you want to share.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap “Ask for Health access again” and allow the data types you want to share."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "点按“再次请求健康权限”，并允许你想共享的数据类型。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "點一下「再次要求健康權限」，並允許你想分享的資料類型。"
+          }
+        }
+      }
+    },
+    "Technical details": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Technical details"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "技术详情"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "技術細節"
+          }
+        }
+      }
+    },
+    "The AI coach is turned off in Settings, so built-in answers are used.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The AI coach is turned off in Settings, so built-in answers are used."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI 教练已在设置中关闭，因此使用内置回答。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI 教練已在設定中關閉，因此使用內建回答。"
+          }
+        }
+      }
+    },
+    "The AI coach needs iOS 26 or later with Apple Intelligence. Built-in answers are used for now.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The AI coach needs iOS 26 or later with Apple Intelligence. Built-in answers are used for now."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI 教练需要 iOS 26 或更高版本并开启 Apple 智能。目前使用内置回答。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI 教練需要 iOS 26 或更新版本並開啟 Apple Intelligence。目前使用內建回答。"
+          }
+        }
+      }
+    },
+    "The AI coach uses Apple Intelligence on your iPhone: free, private, nothing leaves the device. The external assistant is optional, off by default, and used only when Apple Intelligence isn't available.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The AI coach uses Apple Intelligence on your iPhone: free, private, nothing leaves the device. The external assistant is optional, off by default, and used only when Apple Intelligence isn't available."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI 教练使用你 iPhone 上的 Apple 智能：免费、私密，数据不会离开设备。外部助手为可选功能，默认关闭，仅在 Apple 智能不可用时使用。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI 教練使用你 iPhone 上的 Apple Intelligence：免費、私密，資料不會離開裝置。外部助手為選用功能，預設關閉，僅在 Apple Intelligence 無法使用時使用。"
+          }
+        }
+      }
+    },
     "The external assistant declined this request.": {
       "extractionState": "manual",
       "localizations": {
@@ -4854,6 +5659,29 @@
         }
       }
     },
+    "This copy of VitalFlow can't use Apple Health": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This copy of VitalFlow can't use Apple Health"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此版本的 VitalFlow 无法使用 Apple 健康"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此版本的 VitalFlow 無法使用 Apple 健康"
+          }
+        }
+      }
+    },
     "This device doesn't support HealthKit. You can explore VitalFlow with demo data in Settings.": {
       "extractionState": "manual",
       "localizations": {
@@ -4873,6 +5701,29 @@
           "stringUnit": {
             "state": "translated",
             "value": "此裝置不支援 HealthKit。你可以在設定中使用示範資料體驗 VitalFlow。"
+          }
+        }
+      }
+    },
+    "This iPhone doesn't support Apple Intelligence (iPhone 15 Pro or newer is required). Built-in answers are used.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This iPhone doesn't support Apple Intelligence (iPhone 15 Pro or newer is required). Built-in answers are used."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此 iPhone 不支持 Apple 智能（需要 iPhone 15 Pro 或更新机型），将使用内置回答。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此 iPhone 不支援 Apple Intelligence（需要 iPhone 15 Pro 或更新機型），將使用內建回答。"
           }
         }
       }
@@ -5176,6 +6027,29 @@
         }
       }
     },
+    "Turn on Apple Intelligence in iPhone Settings → Apple Intelligence & Siri to use the AI coach.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Turn on Apple Intelligence in iPhone Settings → Apple Intelligence & Siri to use the AI coach."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请在 iPhone“设置 → Apple 智能与 Siri”中开启 Apple 智能以使用 AI 教练。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "請在 iPhone「設定 → Apple Intelligence 與 Siri」中開啟 Apple Intelligence 以使用 AI 教練。"
+          }
+        }
+      }
+    },
     "Understand your recovery, sleep and energy — privately, on your own devices.": {
       "extractionState": "manual",
       "localizations": {
@@ -5245,6 +6119,52 @@
         }
       }
     },
+    "Use demo data": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Use demo data"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "使用演示数据"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "使用示範資料"
+          }
+        }
+      }
+    },
+    "Use demo data instead": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Use demo data instead"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "改用演示数据"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "改用示範資料"
+          }
+        }
+      }
+    },
     "Value": {
       "extractionState": "manual",
       "localizations": {
@@ -5264,6 +6184,52 @@
           "stringUnit": {
             "state": "translated",
             "value": "數值"
+          }
+        }
+      }
+    },
+    "VitalFlow can't see any Health data from the last 7 days yet. Check the connection to find out why.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "VitalFlow can't see any Health data from the last 7 days yet. Check the connection to find out why."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "VitalFlow 还看不到最近 7 天的任何健康数据。检查连接以了解原因。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "VitalFlow 還看不到最近 7 天的任何健康資料。檢查連線以了解原因。"
+          }
+        }
+      }
+    },
+    "VitalFlow has asked for access but can't read any data. In the Health app open your profile → Apps → VitalFlow and turn on all categories. Without Apple Watch, only iPhone data such as steps and distance is available, and sleep needs Sleep Focus or a sleep-tracking device.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "VitalFlow has asked for access but can't read any data. In the Health app open your profile → Apps → VitalFlow and turn on all categories. Without Apple Watch, only iPhone data such as steps and distance is available, and sleep needs Sleep Focus or a sleep-tracking device."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "VitalFlow 已请求权限，但读取不到任何数据。请在“健康”App 中打开个人资料 → App → VitalFlow，并开启所有类别。没有 Apple Watch 时，只有步数、距离等 iPhone 数据；睡眠数据需要睡眠专注模式或睡眠追踪设备。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "VitalFlow 已要求權限，但讀取不到任何資料。請在「健康」App 中打開個人資料 → App → VitalFlow，並開啟所有類別。沒有 Apple Watch 時，只有步數、距離等 iPhone 資料；睡眠資料需要睡眠專注模式或睡眠追蹤裝置。"
           }
         }
       }
@@ -5448,6 +6414,29 @@
           "stringUnit": {
             "state": "translated",
             "value": "一天內步行一萬步。"
+          }
+        }
+      }
+    },
+    "Walking + running distance": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Walking + running distance"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "步行 + 跑步距离"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "步行 + 跑步距離"
           }
         }
       }
@@ -5682,6 +6671,29 @@
         }
       }
     },
+    "What should I focus on today?": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "What should I focus on today?"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "我今天应该关注什么？"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "我今天應該注意什麼？"
+          }
+        }
+      }
+    },
     "What we access": {
       "extractionState": "manual",
       "localizations": {
@@ -5866,6 +6878,29 @@
         }
       }
     },
+    "Workouts": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Workouts"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "体能训练"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "體能訓練"
+          }
+        }
+      }
+    },
     "Wrist temperature": {
       "extractionState": "manual",
       "localizations": {
@@ -5885,6 +6920,29 @@
           "stringUnit": {
             "state": "translated",
             "value": "手腕溫度"
+          }
+        }
+      }
+    },
+    "Writing your briefing…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Writing your briefing…"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在撰写你的简报…"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在撰寫你的簡報…"
           }
         }
       }

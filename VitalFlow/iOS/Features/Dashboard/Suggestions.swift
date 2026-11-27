@@ -138,6 +138,14 @@ struct ScoreDetailView: View {
                             }
                         }
                     }
+                    Section {
+                        Button {
+                            dismiss()
+                            model.askCoach(coachQuestion)
+                        } label: {
+                            Label("Ask Coach about this", systemImage: "sparkles")
+                        }
+                    }
                     Section("How it works") {
                         Text(explanation).font(.footnote)
                         ExperimentalNote()
@@ -157,6 +165,16 @@ struct ScoreDetailView: View {
         case .stress: return "Stress"
         case .readiness: return "Training readiness"
         case .sleep: return "Sleep score"
+        }
+    }
+
+    var coachQuestion: String {
+        switch kind {
+        case .recovery: return String(localized: "Explain my recovery score today.")
+        case .battery: return String(localized: "Explain my Body Battery today.")
+        case .stress: return String(localized: "Explain my stress today.")
+        case .readiness: return String(localized: "Explain my training readiness today.")
+        case .sleep: return String(localized: "Explain my sleep score from last night.")
         }
     }
 

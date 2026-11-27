@@ -16,6 +16,9 @@ struct SettingsView: View {
         NavigationStack {
             Form {
                 Section("Health data") {
+                    NavigationLink { HealthConnectionView() } label: {
+                        Label("Health connection", systemImage: "stethoscope")
+                    }
                     Button {
                         Task { await model.requestHealthAccess() }
                     } label: { Label("Review Health permissions", systemImage: "heart.text.square") }
@@ -59,6 +62,18 @@ struct SettingsView: View {
                 .onChange(of: model.settings) { _, s in Task { await ReminderScheduler.apply(s) } }
 
                 Section {
+                    Toggle(isOn: Binding(get: { model.settings.useAppleIntelligence },
+                                         set: { on in
+                                             model.settings.appleIntelligenceCoachDisabled = on ? nil : true
+                                             AICoach.shared.resetConversation()
+                                             Task { await model.refreshBriefing(force: true) }
+                                         })) {
+                        Label("AI coach (Apple Intelligence)", systemImage: "sparkles")
+                    }
+                    if model.settings.useAppleIntelligence && AICoach.shared.availability != .available {
+                        Text(AssistantView.aiUnavailableReason(AICoach.shared.availability, enabled: true))
+                            .font(.caption).foregroundStyle(.secondary)
+                    }
                     Toggle(isOn: Binding(get: { model.settings.externalAssistantEnabled },
                                          set: { on in if on { showConsent = true } else { revokeExternal() } })) {
                         Label("External AI assistant", systemImage: "network")
@@ -71,7 +86,7 @@ struct SettingsView: View {
                         }
                     }
                 } header: { Text("Assistant") } footer: {
-                    Text("Off by default. The built-in assistant runs entirely on this device.")
+                    Text("The AI coach uses Apple Intelligence on your iPhone: free, private, nothing leaves the device. The external assistant is optional, off by default, and used only when Apple Intelligence isn't available.")
                 }
 
                 Section("Privacy") {

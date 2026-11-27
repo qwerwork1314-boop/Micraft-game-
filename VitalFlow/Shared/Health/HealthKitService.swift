@@ -226,6 +226,37 @@ final class HealthKitService: @unchecked Sendable {
         return Calendar.current.dateComponents([.year], from: date, to: now).year
     }
 
+    // MARK: Diagnostics
+
+    enum RequestStatus { case notAsked, asked, unknown }
+
+    /// Whether the permission sheet still needs to be shown. (HealthKit never reveals which
+    /// read permissions were granted; it only says whether the user has been asked.)
+    func authorizationRequestStatus() async -> RequestStatus {
+        guard isAvailable else { return .unknown }
+        do {
+            switch try await store.statusForAuthorizationRequest(toShare: Self.shareTypes, read: Self.readTypes) {
+            case .shouldRequest: return .notAsked
+            case .unnecessary: return .asked
+            default: return .unknown
+            }
+        } catch {
+            return .unknown
+        }
+    }
+
+    /// Number of readable samples per data type over the last `days` days.
+    func sampleCounts(days: Int = 7) async -> [(id: String, count: Int)] {
+        let end = Date(), start = end.addingTimeInterval(-Double(days) * 86_400)
+        var out: [(String, Int)] = []
+        for kind in MetricKind.allCases {
+            out.append((kind.rawValue, await quantitySamples(kind, start: start, end: end, limit: 5_000).count))
+        }
+        out.append(("sleep", await sleepSamples(start: start, end: end).count))
+        out.append(("workouts", await workouts(start: start, end: end).count))
+        return out.map { (id: $0.0, count: $0.1) }
+    }
+
     // MARK: Writing
 
     func logWater(milliliters: Double, at date: Date = Date()) async throws {

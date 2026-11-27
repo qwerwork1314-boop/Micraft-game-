@@ -8,6 +8,7 @@ struct DashboardView: View {
     @Environment(\.modelContext) private var context
     @State private var showSettings = false
     @State private var detail: ScoreKind?
+    @State private var showConnection = false
 
     var body: some View {
         NavigationStack {
@@ -15,7 +16,11 @@ struct DashboardView: View {
                 VStack(spacing: 16) {
                     if model.isDemo { DemoBanner() }
                     if !model.healthAvailable && !model.isDemo { unavailableCard }
+                    if model.healthAvailable && !model.isDemo && model.bundle != nil && !model.hasRecentHealthData {
+                        noDataCard
+                    }
                     if let a = model.assessment {
+                        AIBriefingCard()
                         hero(a)
                         readinessCard(a)
                         HStack(spacing: 12) {
@@ -48,7 +53,28 @@ struct DashboardView: View {
             }
             .sheet(isPresented: $showSettings) { SettingsView() }
             .sheet(item: $detail) { kind in ScoreDetailView(kind: kind) }
+            .sheet(isPresented: $showConnection) { NavigationStack { HealthConnectionView() } }
             .task { model.persistDailyScores(context: context) }
+        }
+    }
+
+    private var noDataCard: some View {
+        VFCard {
+            VStack(alignment: .leading, spacing: 10) {
+                Label("No Health data found", systemImage: "heart.slash").font(.headline)
+                Text("VitalFlow can't see any Health data from the last 7 days yet. Check the connection to find out why.")
+                    .font(.subheadline).foregroundStyle(.secondary)
+                HStack {
+                    Button { showConnection = true } label: {
+                        Label("Check Health connection", systemImage: "stethoscope")
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .tint(Brand.emerald)
+                    Button("Use demo data") { model.setDemoMode(true) }
+                        .buttonStyle(.bordered)
+                }
+                .font(.subheadline)
+            }
         }
     }
 
@@ -321,6 +347,45 @@ struct SuggestionsCard: View {
                         Image(systemName: s.icon).foregroundStyle(Brand.emerald).frame(width: 24)
                         Text(s.text).font(.subheadline)
                     }
+                }
+            }
+        }
+    }
+}
+
+// MARK: - AI briefing
+
+struct AIBriefingCard: View {
+    @Environment(AppModel.self) private var model
+
+    var body: some View {
+        if model.aiAvailable && (model.aiBriefing != nil || model.aiBriefingLoading) {
+            VFCard {
+                VStack(alignment: .leading, spacing: 10) {
+                    HStack {
+                        Label("AI briefing", systemImage: "sparkles")
+                            .font(.subheadline.weight(.semibold))
+                            .foregroundStyle(Brand.flow)
+                        Spacer()
+                        Text("On-device · Apple Intelligence").font(.caption2).foregroundStyle(.secondary)
+                    }
+                    if let text = model.aiBriefing {
+                        Text(text).font(.subheadline).transition(.opacity)
+                    } else {
+                        HStack(spacing: 8) {
+                            ProgressView()
+                            Text("Writing your briefing…").font(.subheadline).foregroundStyle(.secondary)
+                        }
+                    }
+                    Button {
+                        Haptics.tap()
+                        model.askCoach(String(localized: "What should I focus on today?"))
+                    } label: {
+                        Label("Ask Coach", systemImage: "bubble.left.and.text.bubble.right")
+                            .font(.subheadline.weight(.medium))
+                    }
+                    .buttonStyle(.bordered)
+                    .tint(Brand.emerald)
                 }
             }
         }

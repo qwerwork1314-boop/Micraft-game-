@@ -23,6 +23,18 @@
   "zh-Hans": "为你的花园喝口水 🌿",
   "zh-Hant": "為你的花園喝口水 🌿"
  },
+ "AI briefing": {
+  "zh-Hans": "AI 简报",
+  "zh-Hant": "AI 簡報"
+ },
+ "AI coach (Apple Intelligence)": {
+  "zh-Hans": "AI 教练（Apple 智能）",
+  "zh-Hant": "AI 教練（Apple Intelligence）"
+ },
+ "AI coach · Apple Intelligence on-device": {
+  "zh-Hans": "AI 教练 · Apple 智能（设备端）",
+  "zh-Hant": "AI 教練 · Apple Intelligence（裝置端）"
+ },
  "API key stored in Keychain": {
   "zh-Hans": "API 密钥已存储在钥匙串中",
   "zh-Hant": "API 金鑰已儲存在鑰匙圈中"
@@ -51,13 +63,45 @@
   "zh-Hans": "由外部 AI 回答",
   "zh-Hant": "由外部 AI 回答"
  },
+ "Answers are generated privately on your iPhone from your own data. Nothing is sent to the internet.": {
+  "zh-Hans": "回答由你的 iPhone 根据你自己的数据私密生成，不会发送到互联网。",
+  "zh-Hant": "回答由你的 iPhone 根據你自己的資料私密產生，不會傳送到網際網路。"
+ },
  "Anthropic API key": {
   "zh-Hans": "Anthropic API 密钥",
   "zh-Hant": "Anthropic API 金鑰"
  },
+ "Apple Intelligence is available.": {
+  "zh-Hans": "Apple 智能可用。",
+  "zh-Hant": "Apple Intelligence 可以使用。"
+ },
+ "Apple Intelligence is still downloading. The AI coach will be ready soon.": {
+  "zh-Hans": "Apple 智能仍在下载中，AI 教练很快就能使用。",
+  "zh-Hant": "Apple Intelligence 仍在下載中，AI 教練很快就能使用。"
+ },
+ "Apple Intelligence isn't available right now. Built-in answers are used.": {
+  "zh-Hans": "Apple 智能目前不可用，将使用内置回答。",
+  "zh-Hant": "Apple Intelligence 目前無法使用，將使用內建回答。"
+ },
+ "Apple Intelligence · on-device": {
+  "zh-Hans": "Apple 智能 · 设备端",
+  "zh-Hant": "Apple Intelligence · 裝置端"
+ },
+ "Ask Coach": {
+  "zh-Hans": "问教练",
+  "zh-Hant": "問教練"
+ },
+ "Ask Coach about this": {
+  "zh-Hans": "向教练询问这个",
+  "zh-Hant": "向教練詢問這項"
+ },
  "Ask about your trends…": {
   "zh-Hans": "询问你的趋势…",
   "zh-Hant": "詢問你的趨勢…"
+ },
+ "Ask for Health access again": {
+  "zh-Hans": "再次请求健康权限",
+  "zh-Hant": "再次要求健康權限"
  },
  "Asleep": {
   "zh-Hans": "睡眠",
@@ -139,6 +183,10 @@
   "zh-Hans": "取消",
   "zh-Hant": "取消"
  },
+ "Check Health connection": {
+  "zh-Hans": "检查健康连接",
+  "zh-Hant": "檢查健康連線"
+ },
  "Choose exactly which data types to share.": {
   "zh-Hans": "自行选择要共享的数据类型。",
   "zh-Hant": "自行選擇要共享的資料型別。"
@@ -154,6 +202,10 @@
  "Combines recovery (65%) with the ratio of your last 7 days of training load to the last 28 days (35%).": {
   "zh-Hans": "结合恢复分数（65%）与最近 7 天训练负荷相对最近 28 天的比值（35%）。",
   "zh-Hant": "結合恢復分數（65%）與最近 7 天訓練負荷相對最近 28 天的比值（35%）。"
+ },
+ "Compare my sleep this week with last week.": {
+  "zh-Hans": "比较我本周和上周的睡眠。",
+  "zh-Hant": "比較我這週和上週的睡眠。"
  },
  "Compares last night's HRV and resting heart rate with your own 28-day baseline, combined with sleep quality and, when available, respiratory rate and wrist temperature. Needs at least 4 days of history.": {
   "zh-Hans": "将昨晚的 HRV 和静息心率与你自己的 28 天基线比较，并结合睡眠质量，以及可用时的呼吸频率和手腕温度。需要至少 4 天的历史数据。",
@@ -174,6 +226,10 @@
  "Connect Health": {
   "zh-Hans": "连接“健康”",
   "zh-Hant": "連線「健康」"
+ },
+ "Connected to Apple Health": {
+  "zh-Hans": "已连接 Apple 健康",
+  "zh-Hant": "已連接 Apple 健康"
  },
  "Consent given %@": {
   "zh-Hans": "已于 %@ 同意",
@@ -206,6 +262,10 @@
  "Daily goals": {
   "zh-Hans": "每日目标",
   "zh-Hant": "每日目標"
+ },
+ "Data VitalFlow can read (last 7 days)": {
+  "zh-Hans": "VitalFlow 可读取的数据（最近 7 天）",
+  "zh-Hant": "VitalFlow 可讀取的資料（最近 7 天）"
  },
  "Date": {
   "zh-Hans": "日期",
@@ -315,9 +375,33 @@
   "zh-Hans": "锻炼",
   "zh-Hant": "鍛鍊"
  },
+ "Exercise minutes": {
+  "zh-Hans": "锻炼分钟数",
+  "zh-Hant": "運動分鐘數"
+ },
  "Experimental wellness estimate — not a medical measurement or diagnosis.": {
   "zh-Hans": "实验性健康估算——并非医学测量或诊断。",
   "zh-Hant": "實驗性健康估算——並非醫學測量或診斷。"
+ },
+ "Explain my Body Battery today.": {
+  "zh-Hans": "解释我今天的身体电量。",
+  "zh-Hant": "解釋我今天的身體電量。"
+ },
+ "Explain my recovery score today.": {
+  "zh-Hans": "解释我今天的恢复分数。",
+  "zh-Hant": "解釋我今天的恢復分數。"
+ },
+ "Explain my sleep score from last night.": {
+  "zh-Hans": "解释我昨晚的睡眠评分。",
+  "zh-Hant": "解釋我昨晚的睡眠評分。"
+ },
+ "Explain my stress today.": {
+  "zh-Hans": "解释我今天的压力。",
+  "zh-Hant": "解釋我今天的壓力。"
+ },
+ "Explain my training readiness today.": {
+  "zh-Hans": "解释我今天的训练准备度。",
+  "zh-Hant": "解釋我今天的訓練準備度。"
  },
  "Explore with demo data": {
   "zh-Hans": "使用演示数据体验",
@@ -386,6 +470,14 @@
  "HRV (45%), resting heart rate (25%), sleep quality (20%), respiratory rate (5%) and wrist temperature (5%) compared with your own 28-day baseline. At least 4 days of history are required.": {
   "zh-Hans": "HRV（45%）、静息心率（25%）、睡眠质量（20%）、呼吸频率（5%）和手腕温度（5%）与你自己的 28 天基线比较。需要至少 4 天的历史数据。",
   "zh-Hant": "HRV（45%）、靜息心率（25%）、睡眠品質（20%）、呼吸頻率（5%）和手腕溫度（5%）與你自己的 28 天基線比較。需要至少 4 天的歷史資料。"
+ },
+ "Health access hasn't been requested yet": {
+  "zh-Hans": "尚未请求健康权限",
+  "zh-Hant": "尚未要求健康權限"
+ },
+ "Health connection": {
+  "zh-Hans": "健康连接",
+  "zh-Hant": "健康連線"
  },
  "Health data": {
   "zh-Hans": "健康数据",
@@ -478,6 +570,10 @@
  "Interruptions": {
   "zh-Hans": "中断",
   "zh-Hant": "中斷"
+ },
+ "It was installed without the Apple Health permission (this often happens with free sideloading). Health data can't be read in this install. Use demo data, or install through TestFlight, which keeps the permission.": {
+  "zh-Hans": "此版本安装时没有包含 Apple 健康权限（免费侧载时经常发生），因此无法读取健康数据。你可以使用演示数据，或通过 TestFlight 安装（会保留该权限）。",
+  "zh-Hant": "此版本安裝時沒有包含 Apple 健康權限（免費側載時經常發生），因此無法讀取健康資料。你可以使用示範資料，或透過 TestFlight 安裝（會保留該權限）。"
  },
  "Keep it light": {
   "zh-Hans": "保持轻松",
@@ -579,9 +675,21 @@
   "zh-Hans": "小睡",
   "zh-Hant": "小睡"
  },
+ "No Health data found": {
+  "zh-Hans": "未找到健康数据",
+  "zh-Hant": "找不到健康資料"
+ },
+ "No Health data yet — answers will be limited. Check Settings → Health connection.": {
+  "zh-Hans": "还没有健康数据——回答会受限。请查看“设置 → 健康连接”。",
+  "zh-Hant": "還沒有健康資料——回答會受限。請查看「設定 → 健康連線」。"
+ },
  "No account, no ads, no tracking.": {
   "zh-Hans": "无需账户，无广告，无追踪。",
   "zh-Hant": "無需帳號，無廣告，無追蹤。"
+ },
+ "No readable Health data": {
+  "zh-Hans": "没有可读取的健康数据",
+  "zh-Hant": "沒有可讀取的健康資料"
  },
  "Not enough data": {
   "zh-Hans": "数据不足",
@@ -610,6 +718,10 @@
  "On-device assistant": {
   "zh-Hans": "设备端助手",
   "zh-Hant": "裝置端助手"
+ },
+ "On-device · Apple Intelligence": {
+  "zh-Hans": "设备端 · Apple 智能",
+  "zh-Hant": "裝置端 · Apple Intelligence"
  },
  "Only rounded daily numbers are sent — for example recovery, sleep hours, resting heart rate and HRV averages. No raw samples, names, dates of birth, device identifiers or locations.": {
   "zh-Hans": "仅发送四舍五入后的每日数值——例如恢复分数、睡眠时长、静息心率和 HRV 平均值。不发送原始样本、姓名、出生日期、设备标识或位置。",
@@ -691,6 +803,10 @@
   "zh-Hans": "静息",
   "zh-Hant": "靜息"
  },
+ "Resting energy": {
+  "zh-Hans": "静息能量",
+  "zh-Hant": "靜態能量"
+ },
  "Resting heart rate": {
   "zh-Hans": "静息心率",
   "zh-Hant": "靜息心率"
@@ -718,6 +834,10 @@
  "Score": {
   "zh-Hans": "评分",
   "zh-Hant": "評分"
+ },
+ "Scores need about 4 nights of sleep with Apple Watch to learn your baseline. Until then they show “Not enough data”.": {
+  "zh-Hans": "评分需要约 4 晚佩戴 Apple Watch 睡眠的数据来学习你的基线，在此之前会显示“数据不足”。",
+  "zh-Hant": "評分需要約 4 晚佩戴 Apple Watch 睡眠的資料來學習你的基線，在此之前會顯示「資料不足」。"
  },
  "Selected": {
   "zh-Hans": "已选",
@@ -831,6 +951,26 @@
   "zh-Hans": "今天放轻松",
   "zh-Hant": "今天放輕鬆"
  },
+ "Tap “Ask for Health access again” and allow the data types you want to share.": {
+  "zh-Hans": "点按“再次请求健康权限”，并允许你想共享的数据类型。",
+  "zh-Hant": "點一下「再次要求健康權限」，並允許你想分享的資料類型。"
+ },
+ "Technical details": {
+  "zh-Hans": "技术详情",
+  "zh-Hant": "技術細節"
+ },
+ "The AI coach is turned off in Settings, so built-in answers are used.": {
+  "zh-Hans": "AI 教练已在设置中关闭，因此使用内置回答。",
+  "zh-Hant": "AI 教練已在設定中關閉，因此使用內建回答。"
+ },
+ "The AI coach needs iOS 26 or later with Apple Intelligence. Built-in answers are used for now.": {
+  "zh-Hans": "AI 教练需要 iOS 26 或更高版本并开启 Apple 智能。目前使用内置回答。",
+  "zh-Hant": "AI 教練需要 iOS 26 或更新版本並開啟 Apple Intelligence。目前使用內建回答。"
+ },
+ "The AI coach uses Apple Intelligence on your iPhone: free, private, nothing leaves the device. The external assistant is optional, off by default, and used only when Apple Intelligence isn't available.": {
+  "zh-Hans": "AI 教练使用你 iPhone 上的 Apple 智能：免费、私密，数据不会离开设备。外部助手为可选功能，默认关闭，仅在 Apple 智能不可用时使用。",
+  "zh-Hant": "AI 教練使用你 iPhone 上的 Apple Intelligence：免費、私密，資料不會離開裝置。外部助手為選用功能，預設關閉，僅在 Apple Intelligence 無法使用時使用。"
+ },
  "The external assistant declined this request.": {
   "zh-Hans": "外部助手拒绝了此请求。",
   "zh-Hant": "外部助手拒絕了此請求。"
@@ -843,9 +983,17 @@
   "zh-Hans": "外部助手未返回回答。",
   "zh-Hant": "外部助手未返回回答。"
  },
+ "This copy of VitalFlow can't use Apple Health": {
+  "zh-Hans": "此版本的 VitalFlow 无法使用 Apple 健康",
+  "zh-Hant": "此版本的 VitalFlow 無法使用 Apple 健康"
+ },
  "This device doesn't support HealthKit. You can explore VitalFlow with demo data in Settings.": {
   "zh-Hans": "此设备不支持 HealthKit。你可以在设置中使用演示数据体验 VitalFlow。",
   "zh-Hant": "此裝置不支援 HealthKit。你可以在設定中使用示範資料體驗 VitalFlow。"
+ },
+ "This iPhone doesn't support Apple Intelligence (iPhone 15 Pro or newer is required). Built-in answers are used.": {
+  "zh-Hans": "此 iPhone 不支持 Apple 智能（需要 iPhone 15 Pro 或更新机型），将使用内置回答。",
+  "zh-Hant": "此 iPhone 不支援 Apple Intelligence（需要 iPhone 15 Pro 或更新機型），將使用內建回答。"
  },
  "This removes settings, conversation history, cached scores, widget data and any stored API key from this device. Data in the Health app is not affected — manage it in the Health app.": {
   "zh-Hans": "这将从本设备删除设置、对话记录、缓存的评分、小组件数据以及已存储的 API 密钥。“健康”App 中的数据不受影响——请在“健康”App 中管理。",
@@ -899,6 +1047,10 @@
   "zh-Hans": "趋势",
   "zh-Hant": "趨勢"
  },
+ "Turn on Apple Intelligence in iPhone Settings → Apple Intelligence & Siri to use the AI coach.": {
+  "zh-Hans": "请在 iPhone“设置 → Apple 智能与 Siri”中开启 Apple 智能以使用 AI 教练。",
+  "zh-Hant": "請在 iPhone「設定 → Apple Intelligence 與 Siri」中開啟 Apple Intelligence 以使用 AI 教練。"
+ },
  "Understand your recovery, sleep and energy — privately, on your own devices.": {
   "zh-Hans": "在你自己的设备上，私密地了解你的恢复、睡眠与精力。",
   "zh-Hant": "在你自己的裝置上，私密地瞭解你的恢復、睡眠與精力。"
@@ -911,9 +1063,25 @@
   "zh-Hans": "更新于 %@",
   "zh-Hant": "更新於 %@"
  },
+ "Use demo data": {
+  "zh-Hans": "使用演示数据",
+  "zh-Hant": "使用示範資料"
+ },
+ "Use demo data instead": {
+  "zh-Hans": "改用演示数据",
+  "zh-Hant": "改用示範資料"
+ },
  "Value": {
   "zh-Hans": "数值",
   "zh-Hant": "數值"
+ },
+ "VitalFlow can't see any Health data from the last 7 days yet. Check the connection to find out why.": {
+  "zh-Hans": "VitalFlow 还看不到最近 7 天的任何健康数据。检查连接以了解原因。",
+  "zh-Hant": "VitalFlow 還看不到最近 7 天的任何健康資料。檢查連線以了解原因。"
+ },
+ "VitalFlow has asked for access but can't read any data. In the Health app open your profile → Apps → VitalFlow and turn on all categories. Without Apple Watch, only iPhone data such as steps and distance is available, and sleep needs Sleep Focus or a sleep-tracking device.": {
+  "zh-Hans": "VitalFlow 已请求权限，但读取不到任何数据。请在“健康”App 中打开个人资料 → App → VitalFlow，并开启所有类别。没有 Apple Watch 时，只有步数、距离等 iPhone 数据；睡眠数据需要睡眠专注模式或睡眠追踪设备。",
+  "zh-Hant": "VitalFlow 已要求權限，但讀取不到任何資料。請在「健康」App 中打開個人資料 → App → VitalFlow，並開啟所有類別。沒有 Apple Watch 時，只有步數、距離等 iPhone 資料；睡眠資料需要睡眠專注模式或睡眠追蹤裝置。"
  },
  "VitalFlow is local-first. All health analysis happens on your iPhone and Apple Watch.": {
   "zh-Hans": "VitalFlow 以本地优先。所有健康分析都在你的 iPhone 和 Apple Watch 上完成。",
@@ -946,6 +1114,10 @@
  "Walk 10,000 steps in a day.": {
   "zh-Hans": "一天内步行一万步。",
   "zh-Hant": "一天內步行一萬步。"
+ },
+ "Walking + running distance": {
+  "zh-Hans": "步行 + 跑步距离",
+  "zh-Hant": "步行 + 跑步距離"
  },
  "Water": {
   "zh-Hans": "饮水",
@@ -987,6 +1159,10 @@
   "zh-Hans": "我现在的活动与恢复平衡如何？",
   "zh-Hant": "我現在的活動與恢復平衡如何？"
  },
+ "What should I focus on today?": {
+  "zh-Hans": "我今天应该关注什么？",
+  "zh-Hant": "我今天應該注意什麼？"
+ },
  "What we access": {
   "zh-Hans": "我们访问什么",
   "zh-Hant": "我們訪問什麼"
@@ -1019,9 +1195,17 @@
   "zh-Hans": "体能训练",
   "zh-Hant": "體能訓練"
  },
+ "Workouts": {
+  "zh-Hans": "体能训练",
+  "zh-Hant": "體能訓練"
+ },
  "Wrist temperature": {
   "zh-Hans": "手腕温度",
   "zh-Hant": "手腕溫度"
+ },
+ "Writing your briefing…": {
+  "zh-Hans": "正在撰写你的简报…",
+  "zh-Hant": "正在撰寫你的簡報…"
  },
  "Year": {
   "zh-Hans": "年",

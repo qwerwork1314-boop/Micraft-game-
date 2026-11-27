@@ -144,3 +144,60 @@ final class PerformanceTests: XCTestCase {
         print("Aggregated 365 days in \(elapsed)s")
     }
 }
+
+final class CoachToolkitTests: XCTestCase {
+    let cal = TestCal.calendar()
+
+    func makeToolkit(demo: Bool = true) -> CoachToolkit {
+        let now = TestCal.date(2026, 6, 1, 18)
+        let ds = DemoDataGenerator.generate(days: 61, endingAt: now, calendar: cal)
+        let today = DayKey(now, calendar: cal)
+        let days = (0..<60).map { today.adding(days: -59 + $0, calendar: cal) }
+        let history = DailyAggregator(calendar: cal).aggregate(days: days, quantities: ds.quantities, sleep: ds.sleep,
+                                                               workouts: ds.workouts, profile: ScoringProfile())
+        let start = today.startDate(in: cal)
+        let intraday = IntradayData(heartRate: ds.quantities.filter { $0.kind == .heartRate && $0.start >= start },
+                                    steps: ds.quantities.filter { $0.kind == .stepCount && $0.start >= start },
+                                    workouts: ds.workouts.filter { $0.start >= start })
+        let a = WellnessEngine(calendar: cal, profile: ScoringProfile()).assess(day: today, history: history, intraday: intraday, now: now, isDemo: demo)
+        return CoachToolkit(assessment: a, history: history, workouts: ds.workouts, goals: GoalSet(), calendar: cal, isDemo: demo)
+    }
+
+    func testTodaySummaryContainsScoresAndDemoNote() {
+        let t = makeToolkit().todaySummary()
+        XCTAssertTrue(t.contains("DEMO"))
+        XCTAssertTrue(t.contains("Recovery: "))
+        XCTAssertTrue(t.contains("/100"))
+        XCTAssertTrue(t.contains("personal baseline"))
+    }
+
+    func testRealDataHasNoDemoNote() {
+        XCTAssertFalse(makeToolkit(demo: false).todaySummary().contains("DEMO"))
+    }
+
+    func testSleepAndTrendAndWorkouts() {
+        let k = makeToolkit()
+        XCTAssertTrue(k.sleepSummary(nightsAgo: 0).contains("asleep"))
+        XCTAssertTrue(k.sleepSummary(nightsAgo: 500).contains("No sleep data"))
+        let tr = k.trendSummary(metric: "restingHeartRate", days: 30)
+        XCTAssertTrue(tr.contains("average"))
+        XCTAssertTrue(tr.contains("lower is generally favourable"))
+        XCTAssertTrue(k.trendSummary(metric: "nonsense", days: 30).contains("Unknown metric"))
+        XCTAssertTrue(k.workoutsSummary(days: 30).contains("workouts in the last"))
+        XCTAssertTrue(k.goalsSummary().contains("Garden"))
+        XCTAssertTrue(k.hasRecentData)
+    }
+
+    func testEmptyDataSaysNotEnough() {
+        let k = CoachToolkit(assessment: nil, history: [], workouts: [], goals: GoalSet(), calendar: cal, isDemo: false)
+        XCTAssertTrue(k.todaySummary().contains("No data"))
+        XCTAssertTrue(k.trendSummary(metric: "hrv", days: 30).contains("not enough data"))
+        XCTAssertTrue(k.workoutsSummary(days: 7).contains("No workouts"))
+        XCTAssertFalse(k.hasRecentData)
+    }
+
+    func testBriefingContextIsCompact() {
+        // Must fit comfortably in a small on-device context window (~4k tokens).
+        XCTAssertLessThan(makeToolkit().briefingContext().count, 3_000)
+    }
+}

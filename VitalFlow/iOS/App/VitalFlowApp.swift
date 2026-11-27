@@ -22,17 +22,20 @@ struct VitalFlowApp: App {
     }
 }
 
+enum AppTab: Hashable { case today, sleep, trends, coach, garden }
+
 struct RootView: View {
     @Environment(AppModel.self) private var model
 
     var body: some View {
+        @Bindable var model = model
         if model.settings.onboarded {
-            TabView {
-                DashboardView().tabItem { Label("Today", systemImage: "circle.hexagongrid.fill") }
-                SleepView().tabItem { Label("Sleep", systemImage: "moon.zzz.fill") }
-                TrendsView().tabItem { Label("Trends", systemImage: "chart.xyaxis.line") }
-                AssistantView().tabItem { Label("Coach", systemImage: "bubble.left.and.text.bubble.right.fill") }
-                GardenView().tabItem { Label("Garden", systemImage: "leaf.fill") }
+            TabView(selection: $model.selectedTab) {
+                DashboardView().tabItem { Label("Today", systemImage: "circle.hexagongrid.fill") }.tag(AppTab.today)
+                SleepView().tabItem { Label("Sleep", systemImage: "moon.zzz.fill") }.tag(AppTab.sleep)
+                TrendsView().tabItem { Label("Trends", systemImage: "chart.xyaxis.line") }.tag(AppTab.trends)
+                AssistantView().tabItem { Label("Coach", systemImage: "sparkles") }.tag(AppTab.coach)
+                GardenView().tabItem { Label("Garden", systemImage: "leaf.fill") }.tag(AppTab.garden)
             }
         } else {
             OnboardingView()

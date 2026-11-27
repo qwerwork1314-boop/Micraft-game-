@@ -18,6 +18,11 @@ struct UserSettings: Codable, Equatable {
     var externalAssistantEnabled = false
     var externalConsentVersion: Int?
     var externalConsentDate: Date?
+    /// nil/false = the Apple Intelligence coach is used when available (optional so older
+    /// saved settings still decode).
+    var appleIntelligenceCoachDisabled: Bool?
+
+    var useAppleIntelligence: Bool { appleIntelligenceCoachDisabled != true }
 
     static let currentConsentVersion = 1
     static let key = "vf.settings.v1"
@@ -47,6 +52,15 @@ final class AppModel {
     var lastError: String?
     var healthAvailable = HealthKitService.shared.isAvailable
     var age: Int?
+    /// Error from the last HealthKit authorization request (e.g. missing entitlement on a
+    /// sideloaded build). Shown on the Health connection screen.
+    var healthAuthError: String?
+    var selectedTab: AppTab = .today
+    /// A question another screen asked the Coach to answer (e.g. "Ask Coach" on a score).
+    var pendingCoachQuestion: String?
+    var aiBriefing: String?
+    var aiBriefingLoading = false
+    private var aiBriefingKey: String?
 
     let calendar = Calendar.current
     let historyDays = 365
@@ -77,7 +91,9 @@ final class AppModel {
     func requestHealthAccess() async {
         do {
             try await HealthKitService.shared.requestAuthorization()
+            healthAuthError = nil
         } catch {
+            healthAuthError = error.localizedDescription
             lastError = error.localizedDescription
         }
         await refresh()
@@ -95,6 +111,41 @@ final class AppModel {
             .assess(day: DayKey(now, calendar: calendar), history: b.history, intraday: b.intraday, now: now, isDemo: b.isDemo)
         withAnimation(.spring(response: 0.6, dampingFraction: 0.85)) { assessment = a }
         publishSnapshot()
+        AICoach.shared.update(coachToolkit)
+        Task { await refreshBriefing() }
+    }
+
+    // MARK: AI
+
+    var coachToolkit: CoachToolkit {
+        CoachToolkit(assessment: assessment, history: history, workouts: bundle?.workouts ?? [],
+                     goals: settings.goals, calendar: calendar, isDemo: isDemo)
+    }
+
+    /// True when real (non-demo) Health data was found in the last 7 days.
+    var hasRecentHealthData: Bool { coachToolkit.hasRecentData }
+
+    var aiAvailable: Bool { settings.useAppleIntelligence && AICoach.shared.availability == .available }
+
+    /// Generates the on-device AI briefing at most once per day per data state.
+    func refreshBriefing(force: Bool = false) async {
+        guard aiAvailable, let a = assessment, isDemo || hasRecentHealthData else { aiBriefing = nil; return }
+        let key = "\(a.day)-\(a.recovery.score ?? -1)-\(a.sleepScore.score ?? -1)-\(isDemo)-\(language.rawValue)"
+        guard force || key != aiBriefingKey, !aiBriefingLoading else { return }
+        aiBriefingLoading = true
+        defer { aiBriefingLoading = false }
+        do {
+            let text = try await AICoach.shared.briefing(toolkit: coachToolkit, language: language)
+            withAnimation(.easeInOut) { aiBriefing = text.trimmingCharacters(in: .whitespacesAndNewlines) }
+            aiBriefingKey = key
+        } catch {
+            aiBriefing = nil
+        }
+    }
+
+    func askCoach(_ question: String) {
+        pendingCoachQuestion = question
+        selectedTab = .coach
     }
 
     func setDemoMode(_ on: Bool) {

@@ -1,6 +1,8 @@
 """Lists user-facing string literals in the app sources (used by build_strings.py)."""
 import re, pathlib, sys
 
+# Files whose literals are prompts/tool descriptions for the AI model, not UI text.
+MODEL_PROMPT_FILES = {"AICoach.swift", "ExternalAssistant.swift"}
 ROOTS = ["iOS", "Watch", "Widgets", "WatchWidgets", "Shared"]
 LIT = re.compile(r'"((?:[^"\\\n]|\\.)*)"')
 SKIP_LINE = re.compile(r'URL\(string|#Predicate|keychainAccount|setValue|static let model|httpMethod|case \.english: lang|case \.simplifiedChinese: lang|case \.traditionalChinese: lang|separator:|error\.localizedDescription')
@@ -21,6 +23,8 @@ def collect():
     out = {}
     for root in ROOTS:
         for p in sorted(pathlib.Path(root).rglob("*.swift")):
+            if p.name in MODEL_PROMPT_FILES:
+                continue
             for ln in p.read_text().splitlines():
                 code = ln.split("//")[0] if '"' not in ln.split("//")[0][-1:] else ln
                 if code.strip().startswith("//") or SKIP_LINE.search(code):
