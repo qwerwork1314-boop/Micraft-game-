@@ -108,13 +108,43 @@ VitalFlow/
 | `ASC_ISSUER_ID` | Issuer ID |
 | `ASC_PRIVATE_KEY_BASE64` | 上一步得到的 base64 字符串 |
 
-3. **Actions → VitalFlow TestFlight → Run workflow**，填写版本号（如 `0.1.0`）后运行。工作流会：生成工程 → 用 API 密钥自动签名并 Archive → 导出并上传到 App Store Connect。构建号自动使用 GitHub 运行编号。
-4. 上传后约 5–30 分钟，App Store Connect 的 **TestFlight** 标签页会出现该构建。首次需要填写“出口合规”（项目已声明 `ITSAppUsesNonExemptEncryption = false`，通常会自动跳过）。
-5. 在 **TestFlight → 内部测试** 中创建群组并把自己（Apple ID）加进去。
-6. 在 iPhone 上安装 **TestFlight** App，用同一 Apple ID 登录，安装 VitalFlow。配对的 Apple Watch 上会自动出现 VitalFlow（或在手表的 App Store/“Watch” App 中安装）。
-7. 首次打开 VitalFlow：阅读声明 → “连接‘健康’” → 在系统弹窗中选择要共享的数据类型。
+3. **注意**：GitHub 只会为默认分支（main）上的工作流显示 “Run workflow” 按钮。请先在 GitHub 上把分支 `claude/vitalflow-health-app-fq5uk8` 通过 Pull Request 合并到 `main`（只会新增 `VitalFlow/` 文件夹和 `.github/workflows/vitalflow-*.yml`，不会改动游戏文件）。
+4. **Actions → VitalFlow TestFlight → Run workflow**，填写版本号（如 `0.1.0`）后运行。工作流会：生成工程 → 用 API 密钥自动签名并 Archive → 导出并上传到 App Store Connect。构建号自动使用 GitHub 运行编号。
+5. 上传后约 5–30 分钟，App Store Connect 的 **TestFlight** 标签页会出现该构建。首次需要填写“出口合规”（项目已声明 `ITSAppUsesNonExemptEncryption = false`，通常会自动跳过）。
+6. 在 **TestFlight → 内部测试** 中创建群组并把自己（Apple ID）加进去。
+7. 在 iPhone 上安装 **TestFlight** App，用同一 Apple ID 登录，安装 VitalFlow。配对的 Apple Watch 上会自动出现 VitalFlow（或在手表的 App Store/“Watch” App 中安装）。
+8. 首次打开 VitalFlow：阅读声明 → “连接‘健康’” → 在系统弹窗中选择要共享的数据类型。
 
 > 🔐 安全：仓库中**没有任何**密码、私钥或证书。`.gitignore` 已忽略 `*.p8`、`*.p12`、`*.mobileprovision`。工作流在结束时删除临时写入的 API 密钥文件。
+
+## 7b. 免费安装（没有 99 美元开发者账号，使用 Windows 电脑）
+
+可以用免费 Apple ID + Windows 上的 **Sideloadly** 把 App 装到自己的 iPhone 上，但有明显限制：
+
+| 限制 | 说明 |
+|---|---|
+| 每 7 天过期 | 免费 Apple ID 的签名只有 7 天有效，到期后 App 打不开，需要用电脑重新安装一次（数据会保留）。 |
+| 最多 3 个侧载 App | 免费账号同时最多 3 个。 |
+| Apple Watch App、小组件 | 很可能无法使用，建议先装“仅 iPhone”版本。 |
+| 健康数据（HealthKit） | 安装包已包含 HealthKit 权限声明，但免费签名下能否读取健康数据**未经测试**。若无法读取，仍可在设置中开启“演示模式”体验界面。 |
+| 后台刷新、同一组共享数据 | 不可用（需要付费账号的 App Group）。 |
+
+步骤：
+
+1. **下载安装包**：GitHub 仓库 → **Actions** → **VitalFlow unsigned IPA (free sideloading)** → 最新一次成功的运行 → 页面底部 **Artifacts** → 下载 `VitalFlow-unsigned-ipa`（需要登录 GitHub），解压得到两个文件：
+   - `VitalFlow-iphone-only-unsigned.ipa`（推荐先用这个）
+   - `VitalFlow-full-unsigned.ipa`（含 Apple Watch App 和小组件，免费账号多半装不上）
+2. **在 Windows 上安装**：
+   - 从 Apple 官网安装 **iTunes**（不要用 Microsoft Store 版本，Sideloadly 推荐官网版）和 **iCloud**。
+   - 从 sideloadly.io 下载安装 **Sideloadly**。
+3. 用 USB 线连接 iPhone，在 iPhone 上点“信任此电脑”。
+4. 打开 Sideloadly：把 `.ipa` 拖进去 → 输入你的 Apple ID → 点 **Start**，按提示输入密码和双重认证验证码。
+   - 建议使用一个专门的 Apple ID，而不是主账号。Apple ID 密码只输入到 Sideloadly 中，不要发给任何聊天机器人。
+5. iPhone：**设置 → 通用 → VPN 与设备管理** → 点你的 Apple ID → **信任**。
+6. iOS 16 及以上还需打开：**设置 → 隐私与安全性 → 开发者模式** → 开启并重启。
+7. 打开 VitalFlow → 连接“健康”。每 7 天用 Sideloadly 重新安装一次。
+
+> 这种方式完全不需要 Mac，也不需要往 GitHub 添加任何密钥。
 
 ## 8. 常见问题
 
