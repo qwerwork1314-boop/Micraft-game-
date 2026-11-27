@@ -1,0 +1,12 @@
+.build/
+.swiftpm/
+DerivedData/
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/
+build/
+*.ipa
+*.p12
+*.mobileprovision
+*.p8
+AuthKey_*
+.env
