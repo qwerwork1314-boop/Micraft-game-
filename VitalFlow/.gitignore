@@ -10,3 +10,6 @@ build/
 *.p8
 AuthKey_*
 .env
+__pycache__/
+*.pyc
+VitalFlow.xcodeproj/
