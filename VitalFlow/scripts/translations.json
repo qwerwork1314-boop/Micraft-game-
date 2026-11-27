@@ -1,0 +1,1090 @@
+{
+ "%d growth · %d-day rhythm": {
+  "zh-Hans": "成长 %d · 连续 %d 天",
+  "zh-Hant": "成長 %d · 連續 %d 天"
+ },
+ "/100": {
+  "zh-Hans": "/100",
+  "zh-Hant": "/100"
+ },
+ "10,000 steps": {
+  "zh-Hans": "一万步",
+  "zh-Hant": "一萬步"
+ },
+ "65% recovery and 35% load balance (7-day vs 28-day training load ratio).": {
+  "zh-Hans": "65% 恢复分数 + 35% 负荷平衡（7 天与 28 天训练负荷比）。",
+  "zh-Hant": "65% 恢復分數 + 35% 負荷平衡（7 天與 28 天訓練負荷比）。"
+ },
+ "A glass of water is an easy win for your garden today.": {
+  "zh-Hans": "喝一杯水，是今天让花园成长的轻松一步。",
+  "zh-Hant": "喝一杯水，是今天讓花園成長的輕鬆一步。"
+ },
+ "A sip for your garden 🌿": {
+  "zh-Hans": "为你的花园喝口水 🌿",
+  "zh-Hant": "為你的花園喝口水 🌿"
+ },
+ "API key stored in Keychain": {
+  "zh-Hans": "API 密钥已存储在钥匙串中",
+  "zh-Hant": "API 金鑰已儲存在鑰匙圈中"
+ },
+ "Active energy": {
+  "zh-Hans": "活动能量",
+  "zh-Hant": "活動能量"
+ },
+ "Activity": {
+  "zh-Hans": "活动",
+  "zh-Hant": "活動"
+ },
+ "Activity and recovery balanced": {
+  "zh-Hans": "活动与恢复平衡",
+  "zh-Hant": "活動與恢復平衡"
+ },
+ "Add an API key in Settings to use the external assistant.": {
+  "zh-Hans": "请在设置中添加 API 密钥以使用外部助手。",
+  "zh-Hant": "請在設定中新增 API 金鑰以使用外部助手。"
+ },
+ "Analysis runs on your iPhone and Apple Watch.": {
+  "zh-Hans": "分析在你的 iPhone 和 Apple Watch 上进行。",
+  "zh-Hant": "分析在你的 iPhone 和 Apple Watch 上進行。"
+ },
+ "Answered by external AI": {
+  "zh-Hans": "由外部 AI 回答",
+  "zh-Hant": "由外部 AI 回答"
+ },
+ "Anthropic API key": {
+  "zh-Hans": "Anthropic API 密钥",
+  "zh-Hant": "Anthropic API 金鑰"
+ },
+ "Ask about your trends…": {
+  "zh-Hans": "询问你的趋势…",
+  "zh-Hant": "詢問你的趨勢…"
+ },
+ "Asleep": {
+  "zh-Hans": "睡眠",
+  "zh-Hant": "睡眠"
+ },
+ "Assistant": {
+  "zh-Hans": "助手",
+  "zh-Hant": "助手"
+ },
+ "Average": {
+  "zh-Hans": "平均",
+  "zh-Hant": "平均"
+ },
+ "Average resting HR": {
+  "zh-Hans": "平均静息心率",
+  "zh-Hant": "平均靜息心率"
+ },
+ "Average sleep": {
+  "zh-Hans": "平均睡眠",
+  "zh-Hant": "平均睡眠"
+ },
+ "Average steps": {
+  "zh-Hans": "平均步数",
+  "zh-Hant": "平均步數"
+ },
+ "Avg REM": {
+  "zh-Hans": "平均 REM",
+  "zh-Hant": "平均 REM"
+ },
+ "Avg deep": {
+  "zh-Hans": "平均深睡",
+  "zh-Hant": "平均深睡"
+ },
+ "Avg efficiency": {
+  "zh-Hans": "平均效率",
+  "zh-Hant": "平均效率"
+ },
+ "Avg wake-ups": {
+  "zh-Hans": "平均醒来次数",
+  "zh-Hant": "平均醒來次數"
+ },
+ "Awake": {
+  "zh-Hans": "清醒",
+  "zh-Hant": "清醒"
+ },
+ "Badges": {
+  "zh-Hans": "徽章",
+  "zh-Hant": "徽章"
+ },
+ "Battery": {
+  "zh-Hans": "电量",
+  "zh-Hant": "電量"
+ },
+ "Bedtime": {
+  "zh-Hans": "就寝时间",
+  "zh-Hant": "就寢時間"
+ },
+ "Bedtime wind-down reminder": {
+  "zh-Hans": "睡前放松提醒",
+  "zh-Hant": "睡前放鬆提醒"
+ },
+ "Before you enable the external assistant": {
+  "zh-Hans": "启用外部助手之前",
+  "zh-Hant": "啟用外部助手之前"
+ },
+ "Blood oxygen": {
+  "zh-Hans": "血氧",
+  "zh-Hant": "血氧"
+ },
+ "Body Battery": {
+  "zh-Hans": "身体电量",
+  "zh-Hant": "身體電量"
+ },
+ "Body weight": {
+  "zh-Hans": "体重",
+  "zh-Hant": "體重"
+ },
+ "Cancel": {
+  "zh-Hans": "取消",
+  "zh-Hant": "取消"
+ },
+ "Choose exactly which data types to share.": {
+  "zh-Hans": "自行选择要共享的数据类型。",
+  "zh-Hant": "自行選擇要共享的資料型別。"
+ },
+ "Clear conversation": {
+  "zh-Hans": "清除对话",
+  "zh-Hant": "清除對話"
+ },
+ "Coach": {
+  "zh-Hans": "教练",
+  "zh-Hant": "教練"
+ },
+ "Combines recovery (65%) with the ratio of your last 7 days of training load to the last 28 days (35%).": {
+  "zh-Hans": "结合恢复分数（65%）与最近 7 天训练负荷相对最近 28 天的比值（35%）。",
+  "zh-Hant": "結合恢復分數（65%）與最近 7 天訓練負荷相對最近 28 天的比值（35%）。"
+ },
+ "Compares last night's HRV and resting heart rate with your own 28-day baseline, combined with sleep quality and, when available, respiratory rate and wrist temperature. Needs at least 4 days of history.": {
+  "zh-Hans": "将昨晚的 HRV 和静息心率与你自己的 28 天基线比较，并结合睡眠质量，以及可用时的呼吸频率和手腕温度。需要至少 4 天的历史数据。",
+  "zh-Hant": "將昨晚的 HRV 和靜息心率與你自己的 28 天基線比較，並結合睡眠品質，以及可用時的呼吸頻率和手腕溫度。需要至少 4 天的歷史資料。"
+ },
+ "Complete any daily goal.": {
+  "zh-Hans": "完成任意一个每日目标。",
+  "zh-Hant": "完成任意一個每日目標。"
+ },
+ "Confidence": {
+  "zh-Hans": "可信度",
+  "zh-Hant": "可信度"
+ },
+ "Connect Apple Health": {
+  "zh-Hans": "连接 Apple 健康",
+  "zh-Hant": "連線 Apple 健康"
+ },
+ "Connect Health": {
+  "zh-Hans": "连接“健康”",
+  "zh-Hant": "連線「健康」"
+ },
+ "Consent given %@": {
+  "zh-Hans": "已于 %@ 同意",
+  "zh-Hant": "已於 %@ 同意"
+ },
+ "Consistency": {
+  "zh-Hans": "规律性",
+  "zh-Hant": "規律性"
+ },
+ "Consistency (last 14 nights)": {
+  "zh-Hans": "规律性（最近 14 晚）",
+  "zh-Hant": "規律性（最近 14 晚）"
+ },
+ "Continue": {
+  "zh-Hans": "继续",
+  "zh-Hant": "繼續"
+ },
+ "Core": {
+  "zh-Hans": "核心",
+  "zh-Hant": "核心"
+ },
+ "Couldn't save to Health. Check VitalFlow's write permission in the Health app.": {
+  "zh-Hans": "无法保存到“健康”。请在“健康”App 中检查 VitalFlow 的写入权限。",
+  "zh-Hant": "無法儲存到「健康」。請在「健康」App 中檢查 VitalFlow 的寫入權限。"
+ },
+ "Cycle": {
+  "zh-Hans": "骑行",
+  "zh-Hant": "騎行"
+ },
+ "Daily goals": {
+  "zh-Hans": "每日目标",
+  "zh-Hant": "每日目標"
+ },
+ "Date": {
+  "zh-Hans": "日期",
+  "zh-Hant": "日期"
+ },
+ "Day": {
+  "zh-Hans": "日",
+  "zh-Hant": "日"
+ },
+ "Daylight": {
+  "zh-Hans": "日照",
+  "zh-Hant": "日照"
+ },
+ "Deep": {
+  "zh-Hans": "深度",
+  "zh-Hant": "深度"
+ },
+ "Deep + REM share": {
+  "zh-Hans": "深睡 + REM 占比",
+  "zh-Hant": "深睡 + REM 佔比"
+ },
+ "Deep and REM sleep were on the lower side. Regular exercise and limiting alcohol before bed can support them.": {
+  "zh-Hans": "深睡和 REM 睡眠偏少。规律运动和睡前少饮酒有助于改善。",
+  "zh-Hant": "深睡和 REM 睡眠偏少。規律運動和睡前少飲酒有助於改善。"
+ },
+ "Delete": {
+  "zh-Hans": "删除",
+  "zh-Hant": "刪除"
+ },
+ "Delete all VitalFlow data": {
+  "zh-Hans": "删除所有 VitalFlow 数据",
+  "zh-Hant": "刪除所有 VitalFlow 資料"
+ },
+ "Delete all VitalFlow data?": {
+  "zh-Hans": "删除所有 VitalFlow 数据？",
+  "zh-Hant": "刪除所有 VitalFlow 資料？"
+ },
+ "Demo": {
+  "zh-Hans": "演示",
+  "zh-Hant": "示範"
+ },
+ "Demo data": {
+  "zh-Hans": "演示数据",
+  "zh-Hant": "示範資料"
+ },
+ "Demo data — not your real health data": {
+  "zh-Hans": "演示数据——并非你的真实健康数据",
+  "zh-Hant": "示範資料——並非你的真實健康資料"
+ },
+ "Demo mode": {
+  "zh-Hans": "演示模式",
+  "zh-Hant": "示範模式"
+ },
+ "Demo mode is on. Values shown are synthetic and not your health data.": {
+  "zh-Hans": "演示模式已开启。显示的数值为合成数据，并非你的健康数据。",
+  "zh-Hant": "示範模式已開啟。顯示的數值為合成資料，並非你的健康資料。"
+ },
+ "Done": {
+  "zh-Hans": "完成",
+  "zh-Hant": "完成"
+ },
+ "Duration": {
+  "zh-Hans": "时长",
+  "zh-Hant": "時長"
+ },
+ "Duration vs your need (40%), efficiency (20%), deep + REM share (20%), interruptions (10%) and consistency (10%).": {
+  "zh-Hans": "时长相对需求（40%）、效率（20%）、深睡 + REM 占比（20%）、中断（10%）和规律性（10%）。",
+  "zh-Hant": "時長相對需求（40%）、效率（20%）、深睡 + REM 佔比（20%）、中斷（10%）和規律性（10%）。"
+ },
+ "Each goal you complete helps a plant grow. Missed days never wilt your garden — plants simply rest.": {
+  "zh-Hans": "每完成一个目标，植物就会成长。错过的日子不会让花园枯萎——植物只是在休息。",
+  "zh-Hant": "每完成一個目標，植物就會成長。錯過的日子不會讓花園枯萎——植物只是在休息。"
+ },
+ "Edit goals": {
+  "zh-Hans": "编辑目标",
+  "zh-Hant": "編輯目標"
+ },
+ "Efficiency": {
+  "zh-Hans": "效率",
+  "zh-Hant": "效率"
+ },
+ "Enable": {
+  "zh-Hans": "启用",
+  "zh-Hant": "啟用"
+ },
+ "End": {
+  "zh-Hans": "结束",
+  "zh-Hant": "結束"
+ },
+ "Estimated energy level.": {
+  "zh-Hans": "估算的精力水平。",
+  "zh-Hant": "估算的精力水平。"
+ },
+ "Estimated from heart rate at rest compared with your resting baseline during hours without workouts or much walking, plus daytime HRV when available.": {
+  "zh-Hans": "在没有体能训练或大量步行的时段，根据静止心率与你的静息基线比较估算，并在可用时结合白天的 HRV。",
+  "zh-Hant": "在沒有體能訓練或大量步行的時段，根據靜止心率與你的靜息基線比較估算，並在可用時結合白天的 HRV。"
+ },
+ "Everything looks steady. Keep doing what's working for you.": {
+  "zh-Hans": "一切都很平稳。继续保持对你有效的习惯。",
+  "zh-Hant": "一切都很平穩。繼續保持對你有效的習慣。"
+ },
+ "Example of exactly what would be sent:": {
+  "zh-Hans": "实际发送内容示例：",
+  "zh-Hant": "實際傳送內容示例："
+ },
+ "Exercise": {
+  "zh-Hans": "锻炼",
+  "zh-Hant": "鍛鍊"
+ },
+ "Experimental wellness estimate — not a medical measurement or diagnosis.": {
+  "zh-Hans": "实验性健康估算——并非医学测量或诊断。",
+  "zh-Hant": "實驗性健康估算——並非醫學測量或診斷。"
+ },
+ "Explore with demo data": {
+  "zh-Hans": "使用演示数据体验",
+  "zh-Hant": "使用示範資料體驗"
+ },
+ "External AI assistant": {
+  "zh-Hans": "外部 AI 助手",
+  "zh-Hant": "外部 AI 助手"
+ },
+ "External assistant enabled": {
+  "zh-Hans": "已启用外部助手",
+  "zh-Hant": "已啟用外部助手"
+ },
+ "First bloom": {
+  "zh-Hans": "第一朵花",
+  "zh-Hant": "第一朵花"
+ },
+ "First sprout": {
+  "zh-Hans": "第一株嫩芽",
+  "zh-Hant": "第一株嫩芽"
+ },
+ "For you today": {
+  "zh-Hans": "今日建议",
+  "zh-Hant": "今日建議"
+ },
+ "Garden": {
+  "zh-Hans": "花园",
+  "zh-Hant": "花園"
+ },
+ "Garden illustration": {
+  "zh-Hans": "花园插图",
+  "zh-Hant": "花園插圖"
+ },
+ "Gentle hydration reminders": {
+  "zh-Hans": "温和的饮水提醒",
+  "zh-Hant": "溫和的飲水提醒"
+ },
+ "Goals": {
+  "zh-Hans": "目标",
+  "zh-Hant": "目標"
+ },
+ "Goals & sleep": {
+  "zh-Hans": "目标与睡眠",
+  "zh-Hant": "目標與睡眠"
+ },
+ "Goals completed": {
+  "zh-Hans": "已完成目标",
+  "zh-Hant": "已完成目標"
+ },
+ "Goals stay within healthy ranges. VitalFlow never sets extreme exercise or calorie targets.": {
+  "zh-Hans": "目标始终保持在健康范围内。VitalFlow 绝不会设定极端的运动或卡路里目标。",
+  "zh-Hant": "目標始終保持在健康範圍內。VitalFlow 絕不會設定極端的運動或卡路里目標。"
+ },
+ "Good rest day": {
+  "zh-Hans": "很好的休息日",
+  "zh-Hant": "很好的休息日"
+ },
+ "Grow a plant into a tree.": {
+  "zh-Hans": "让一株植物长成大树。",
+  "zh-Hant": "讓一株植物長成大樹。"
+ },
+ "Grow a plant to full bloom.": {
+  "zh-Hans": "让一株植物完全开花。",
+  "zh-Hant": "讓一株植物完全開花。"
+ },
+ "HRV (45%), resting heart rate (25%), sleep quality (20%), respiratory rate (5%) and wrist temperature (5%) compared with your own 28-day baseline. At least 4 days of history are required.": {
+  "zh-Hans": "HRV（45%）、静息心率（25%）、睡眠质量（20%）、呼吸频率（5%）和手腕温度（5%）与你自己的 28 天基线比较。需要至少 4 天的历史数据。",
+  "zh-Hant": "HRV（45%）、靜息心率（25%）、睡眠品質（20%）、呼吸頻率（5%）和手腕溫度（5%）與你自己的 28 天基線比較。需要至少 4 天的歷史資料。"
+ },
+ "Health data": {
+  "zh-Hans": "健康数据",
+  "zh-Hant": "健康資料"
+ },
+ "Health data is not available on this device.": {
+  "zh-Hans": "此设备无法使用健康数据。",
+  "zh-Hant": "此裝置無法使用健康資料。"
+ },
+ "Health data unavailable": {
+  "zh-Hans": "健康数据不可用",
+  "zh-Hant": "健康資料不可用"
+ },
+ "Heart": {
+  "zh-Hans": "心脏",
+  "zh-Hant": "心臟"
+ },
+ "Heart rate": {
+  "zh-Hans": "心率",
+  "zh-Hant": "心率"
+ },
+ "Heart rate at rest relative to your resting baseline and heart-rate reserve, plus daytime HRV, during hours without workouts or much walking.": {
+  "zh-Hans": "在没有体能训练或大量步行的时段，静止心率相对你的静息基线与心率储备的水平，并结合白天的 HRV。",
+  "zh-Hant": "在沒有體能訓練或大量步行的時段，靜止心率相對你的靜息基線與心率儲備的水平，並結合白天的 HRV。"
+ },
+ "Heart rate during sleep": {
+  "zh-Hans": "睡眠期间心率",
+  "zh-Hant": "睡眠期間心率"
+ },
+ "Heart rate variability": {
+  "zh-Hans": "心率变异性",
+  "zh-Hant": "心率變異性"
+ },
+ "High confidence": {
+  "zh-Hans": "高可信度",
+  "zh-Hant": "高可信度"
+ },
+ "Hour": {
+  "zh-Hans": "小时",
+  "zh-Hant": "小時"
+ },
+ "Hours": {
+  "zh-Hans": "小时",
+  "zh-Hant": "小時"
+ },
+ "Hours analysed": {
+  "zh-Hans": "分析小时数",
+  "zh-Hant": "分析小時數"
+ },
+ "How has my resting heart rate changed this month?": {
+  "zh-Hans": "这个月我的静息心率有什么变化？",
+  "zh-Hant": "這個月我的靜息心率有什麼變化？"
+ },
+ "How it works": {
+  "zh-Hans": "计算方式",
+  "zh-Hant": "計算方式"
+ },
+ "How scores work": {
+  "zh-Hans": "评分如何计算",
+  "zh-Hant": "評分如何計算"
+ },
+ "How well did I sleep last night?": {
+  "zh-Hans": "我昨晚睡得怎么样？",
+  "zh-Hant": "我昨晚睡得怎麼樣？"
+ },
+ "Hydration": {
+  "zh-Hans": "饮水",
+  "zh-Hant": "飲水"
+ },
+ "I explain your own trends. I can't diagnose conditions, recommend medication or replace a medical professional.": {
+  "zh-Hans": "我会解释你自己的数据趋势。我无法诊断疾病、推荐药物，也不能替代医疗专业人员。",
+  "zh-Hant": "我會解釋你自己的資料趨勢。我無法診斷疾病、推薦藥物，也不能替代醫療專業人員。"
+ },
+ "I understand": {
+  "zh-Hans": "我已了解",
+  "zh-Hant": "我已瞭解"
+ },
+ "I understand and agree to send this information": {
+  "zh-Hans": "我已了解并同意发送这些信息",
+  "zh-Hant": "我已瞭解並同意傳送這些資訊"
+ },
+ "If you're thirsty, a glass of water is a nice way to look after yourself.": {
+  "zh-Hans": "如果口渴了，喝杯水是照顾自己的好方式。",
+  "zh-Hant": "如果口渴了，喝杯水是照顧自己的好方式。"
+ },
+ "In bed": {
+  "zh-Hans": "卧床",
+  "zh-Hant": "臥床"
+ },
+ "Interruptions": {
+  "zh-Hans": "中断",
+  "zh-Hant": "中斷"
+ },
+ "Keep it light": {
+  "zh-Hans": "保持轻松",
+  "zh-Hant": "保持輕鬆"
+ },
+ "Keep wearing your watch to unlock insights.": {
+  "zh-Hans": "继续佩戴手表以解锁更多洞察。",
+  "zh-Hant": "繼續佩戴手錶以解鎖更多洞察。"
+ },
+ "Last night": {
+  "zh-Hans": "昨晚",
+  "zh-Hant": "昨晚"
+ },
+ "Last night was shorter than your goal. A consistent wind-down routine can help tonight.": {
+  "zh-Hans": "昨晚的睡眠少于目标。今晚保持固定的睡前放松习惯会有帮助。",
+  "zh-Hant": "昨晚的睡眠少於目標。今晚保持固定的睡前放鬆習慣會有幫助。"
+ },
+ "Latest": {
+  "zh-Hans": "最新",
+  "zh-Hant": "最新"
+ },
+ "Level": {
+  "zh-Hans": "水平",
+  "zh-Hant": "水平"
+ },
+ "Load balance (7d / 28d)": {
+  "zh-Hans": "负荷平衡（7 天 / 28 天）",
+  "zh-Hant": "負荷平衡（7 天 / 28 天）"
+ },
+ "Load is ahead of recovery": {
+  "zh-Hans": "负荷超过恢复",
+  "zh-Hant": "負荷超過恢復"
+ },
+ "Locked": {
+  "zh-Hans": "未解锁",
+  "zh-Hant": "未解鎖"
+ },
+ "Log 250 millilitres of water": {
+  "zh-Hans": "记录 250 毫升饮水",
+  "zh-Hant": "記錄 250 毫升飲水"
+ },
+ "Log workouts for two weeks to see training balance.": {
+  "zh-Hans": "记录两周的体能训练即可查看训练平衡。",
+  "zh-Hant": "記錄兩週的體能訓練即可檢視訓練平衡。"
+ },
+ "Low confidence": {
+  "zh-Hans": "低可信度",
+  "zh-Hant": "低可信度"
+ },
+ "Low with fewer than 14 days of baseline or missing inputs, medium with 14–20 days, high with 21+ days and most inputs available.": {
+  "zh-Hans": "基线不足 14 天或输入缺失时为低，14–20 天为中，21 天以上且大部分输入可用时为高。",
+  "zh-Hant": "基線不足 14 天或輸入缺失時為低，14–20 天為中，21 天以上且大部分輸入可用時為高。"
+ },
+ "Manage Health permissions in the Health app at any time. Use Settings → Delete all VitalFlow data to erase everything VitalFlow stored on this device.": {
+  "zh-Hans": "你可以随时在“健康”App 中管理权限。使用“设置 → 删除所有 VitalFlow 数据”即可清除 VitalFlow 在本设备上存储的所有内容。",
+  "zh-Hant": "你可以隨時在「健康」App 中管理權限。使用「設定 → 刪除所有 VitalFlow 資料」即可清除 VitalFlow 在本裝置上儲存的所有內容。"
+ },
+ "Medium confidence": {
+  "zh-Hans": "中等可信度",
+  "zh-Hant": "中等可信度"
+ },
+ "Meet two goals seven days in a row.": {
+  "zh-Hans": "连续七天完成两个目标。",
+  "zh-Hant": "連續七天完成兩個目標。"
+ },
+ "Meet two goals three days in a row.": {
+  "zh-Hans": "连续三天完成两个目标。",
+  "zh-Hant": "連續三天完成兩個目標。"
+ },
+ "Moderate training": {
+  "zh-Hans": "适度训练",
+  "zh-Hant": "適度訓練"
+ },
+ "Moderately recovered": {
+  "zh-Hans": "中等恢复",
+  "zh-Hant": "中等恢復"
+ },
+ "Month": {
+  "zh-Hans": "月",
+  "zh-Hant": "月"
+ },
+ "Morning charge": {
+  "zh-Hans": "晨间电量",
+  "zh-Hant": "晨間電量"
+ },
+ "Morning charge from recovery and sleep; drains with time awake, active energy and high stress; small recharge during calm hours.": {
+  "zh-Hans": "晨间电量来自恢复与睡眠；随清醒时间、活动能量和高压力消耗；平静时段少量回充。",
+  "zh-Hant": "晨間電量來自恢復與睡眠；隨清醒時間、活動能量和高壓力消耗；平靜時段少量回充。"
+ },
+ "Morning daylight helps anchor your sleep rhythm.": {
+  "zh-Hans": "早晨的阳光有助于稳定睡眠节律。",
+  "zh-Hant": "早晨的陽光有助於穩定睡眠節律。"
+ },
+ "Move": {
+  "zh-Hans": "活动能量",
+  "zh-Hant": "活動能量"
+ },
+ "Nap": {
+  "zh-Hans": "小睡",
+  "zh-Hant": "小睡"
+ },
+ "No account, no ads, no tracking.": {
+  "zh-Hans": "无需账户，无广告，无追踪。",
+  "zh-Hant": "無需帳號，無廣告，無追蹤。"
+ },
+ "Not enough data": {
+  "zh-Hans": "数据不足",
+  "zh-Hant": "資料不足"
+ },
+ "Not enough heart rate readings at rest yet today.": {
+  "zh-Hans": "今天静止状态下的心率读数还不够。",
+  "zh-Hant": "今天靜止狀態下的心率讀數還不夠。"
+ },
+ "Not medical advice": {
+  "zh-Hans": "非医疗建议",
+  "zh-Hant": "非醫療建議"
+ },
+ "Nothing, by default. There are no accounts, ads, analytics or tracking. Health data is never sold, used for advertising or shared with data brokers. If you opt in to the external assistant, only the minimal summary shown on the consent screen is sent to the AI provider to answer your question.": {
+  "zh-Hans": "默认情况下不分享任何内容。没有账户、广告、分析或追踪。健康数据绝不会被出售、用于广告或分享给数据经纪商。如果你选择启用外部助手，只有同意页面上显示的最少摘要会发送给 AI 服务商以回答你的问题。",
+  "zh-Hant": "預設情況下不分享任何內容。沒有帳號、廣告、分析或追蹤。健康資料絕不會被出售、用於廣告或分享給資料經紀商。如果你選擇啟用外部助手，只有同意頁面上顯示的最少摘要會傳送給 AI 服務商以回答你的問題。"
+ },
+ "Off by default. The built-in assistant runs entirely on this device.": {
+  "zh-Hans": "默认关闭。内置助手完全在本设备上运行。",
+  "zh-Hant": "預設關閉。內建助手完全在本裝置上執行。"
+ },
+ "Old oak": {
+  "zh-Hans": "参天橡树",
+  "zh-Hant": "參天橡樹"
+ },
+ "On-device assistant": {
+  "zh-Hans": "设备端助手",
+  "zh-Hant": "裝置端助手"
+ },
+ "Only rounded daily numbers are sent — for example recovery, sleep hours, resting heart rate and HRV averages. No raw samples, names, dates of birth, device identifiers or locations.": {
+  "zh-Hans": "仅发送四舍五入后的每日数值——例如恢复分数、睡眠时长、静息心率和 HRV 平均值。不发送原始样本、姓名、出生日期、设备标识或位置。",
+  "zh-Hant": "僅傳送四捨五入後的每日數值——例如恢復分數、睡眠時長、靜息心率和 HRV 平均值。不傳送原始樣本、姓名、出生日期、裝置標示或位置。"
+ },
+ "Open VitalFlow on iPhone to sync.": {
+  "zh-Hans": "在 iPhone 上打开 VitalFlow 以同步。",
+  "zh-Hant": "在 iPhone 上開啟 VitalFlow 以同步。"
+ },
+ "Open the Health app": {
+  "zh-Hans": "打开“健康”App",
+  "zh-Hant": "開啟「健康」App"
+ },
+ "Optional and off by default. VitalFlow never sends guilt-based or streak-loss notifications.": {
+  "zh-Hans": "可选功能，默认关闭。VitalFlow 绝不会发送制造内疚感或断签警告的通知。",
+  "zh-Hant": "可選功能，預設關閉。VitalFlow 絕不會傳送製造內疚感或斷籤警告的通知。"
+ },
+ "Period": {
+  "zh-Hans": "周期",
+  "zh-Hant": "週期"
+ },
+ "Privacy": {
+  "zh-Hans": "隐私",
+  "zh-Hant": "隱私"
+ },
+ "Privacy policy": {
+  "zh-Hans": "隐私政策",
+  "zh-Hant": "隱私政策"
+ },
+ "Progress toward today's water goal.": {
+  "zh-Hans": "今日饮水目标进度。",
+  "zh-Hant": "今日飲水目標進度。"
+ },
+ "Questions about diagnoses or medication are never sent; they're answered on-device with a referral to a professional.": {
+  "zh-Hans": "有关诊断或药物的问题绝不会被发送，而是在设备端回答并建议你咨询专业人士。",
+  "zh-Hant": "有關診斷或藥物的問題絕不會被發送，而是在裝置端回答並建議你諮詢專業人士。"
+ },
+ "Range": {
+  "zh-Hans": "范围",
+  "zh-Hant": "範圍"
+ },
+ "Reach your water goal seven days in a row.": {
+  "zh-Hans": "连续七天达到饮水目标。",
+  "zh-Hant": "連續七天達到飲水目標。"
+ },
+ "Ready to push": {
+  "zh-Hans": "可以加强训练",
+  "zh-Hant": "可以加強訓練"
+ },
+ "Recovery": {
+  "zh-Hans": "恢复",
+  "zh-Hant": "恢復"
+ },
+ "Recovery, Body Battery, stress and sleep at a glance.": {
+  "zh-Hans": "一眼查看恢复、身体电量、压力和睡眠。",
+  "zh-Hant": "一眼檢視恢復、身體電量、壓力和睡眠。"
+ },
+ "Reminders": {
+  "zh-Hans": "提醒",
+  "zh-Hant": "提醒"
+ },
+ "Requires today's recovery score.": {
+  "zh-Hans": "需要今天的恢复分数。",
+  "zh-Hant": "需要今天的恢復分數。"
+ },
+ "Respiratory rate": {
+  "zh-Hans": "呼吸频率",
+  "zh-Hant": "呼吸頻率"
+ },
+ "Rest and recover": {
+  "zh-Hans": "休息与恢复",
+  "zh-Hant": "休息與恢復"
+ },
+ "Restful stretch": {
+  "zh-Hans": "安睡时光",
+  "zh-Hant": "安睡時光"
+ },
+ "Resting": {
+  "zh-Hans": "静息",
+  "zh-Hant": "靜息"
+ },
+ "Resting heart rate": {
+  "zh-Hans": "静息心率",
+  "zh-Hant": "靜息心率"
+ },
+ "Resting heart rate for today isn't available yet.": {
+  "zh-Hans": "今天的静息心率暂不可用。",
+  "zh-Hant": "今天的靜息心率暫不可用。"
+ },
+ "Review Health permissions": {
+  "zh-Hans": "查看健康权限",
+  "zh-Hant": "檢視健康權限"
+ },
+ "Room to push": {
+  "zh-Hans": "仍有提升空间",
+  "zh-Hant": "仍有提升空間"
+ },
+ "Run": {
+  "zh-Hans": "跑步",
+  "zh-Hant": "跑步"
+ },
+ "Save key": {
+  "zh-Hans": "保存密钥",
+  "zh-Hant": "儲存金鑰"
+ },
+ "Score": {
+  "zh-Hans": "评分",
+  "zh-Hant": "評分"
+ },
+ "Selected": {
+  "zh-Hans": "已选",
+  "zh-Hant": "已選"
+ },
+ "Send": {
+  "zh-Hans": "发送",
+  "zh-Hant": "傳送"
+ },
+ "Settings": {
+  "zh-Hans": "设置",
+  "zh-Hant": "設定"
+ },
+ "Settings, cached daily scores and assistant conversations are stored on this device with iOS file protection. Widgets receive only summary scores.": {
+  "zh-Hans": "设置、缓存的每日评分和助手对话以 iOS 文件保护方式存储在本设备上。小组件只获取摘要评分。",
+  "zh-Hant": "設定、快取的每日評分和助手對話以 iOS 檔案保護方式儲存在本裝置上。小工具只獲取摘要評分。"
+ },
+ "Several wake-ups last night. A cool, dark, quiet room and less caffeine late in the day may help.": {
+  "zh-Hans": "昨晚醒来多次。凉爽、黑暗、安静的房间以及下午后减少咖啡因可能会有帮助。",
+  "zh-Hant": "昨晚醒來多次。涼爽、黑暗、安靜的房間以及下午後減少咖啡因可能會有幫助。"
+ },
+ "Shows clearly labelled synthetic data for exploring the app. Demo data is never written to Health and is never mixed with your real data.": {
+  "zh-Hans": "显示带有明确标识的合成数据以便体验 App。演示数据绝不会写入“健康”，也不会与你的真实数据混合。",
+  "zh-Hant": "顯示帶有明確標示的合成資料以便體驗 App。示範資料絕不會寫入「健康」，也不會與你的真實資料混合。"
+ },
+ "Sleep": {
+  "zh-Hans": "睡眠",
+  "zh-Hant": "睡眠"
+ },
+ "Sleep need: %@ h": {
+  "zh-Hans": "睡眠需求：%@ 小时",
+  "zh-Hant": "睡眠需求：%@ 小時"
+ },
+ "Sleep quality": {
+  "zh-Hans": "睡眠质量",
+  "zh-Hant": "睡眠品質"
+ },
+ "Sleep score": {
+  "zh-Hans": "睡眠评分",
+  "zh-Hant": "睡眠評分"
+ },
+ "Sleep seven hours or more five nights in a row.": {
+  "zh-Hans": "连续五晚睡眠七小时或以上。",
+  "zh-Hant": "連續五晚睡眠七小時或以上。"
+ },
+ "Sleep stage timeline": {
+  "zh-Hans": "睡眠阶段时间线",
+  "zh-Hant": "睡眠階段時間線"
+ },
+ "Sleep stages": {
+  "zh-Hans": "睡眠阶段",
+  "zh-Hant": "睡眠階段"
+ },
+ "Sleep stages require Apple Watch with sleep tracking enabled (Sleep Focus in the Health app).": {
+  "zh-Hans": "睡眠阶段需要开启睡眠追踪的 Apple Watch（在“健康”App 中设置睡眠专注模式）。",
+  "zh-Hant": "睡眠階段需要開啟睡眠追蹤的 Apple Watch（在「健康」App 中設定睡眠專注模式）。"
+ },
+ "Sleep suggestions": {
+  "zh-Hans": "睡眠建议",
+  "zh-Hant": "睡眠建議"
+ },
+ "Sleeping HR": {
+  "zh-Hans": "睡眠心率",
+  "zh-Hant": "睡眠心率"
+ },
+ "Some daylight, especially in the morning, supports your sleep rhythm.": {
+  "zh-Hans": "适量日照，尤其是早晨的阳光，有助于稳定睡眠节律。",
+  "zh-Hant": "適量日照，尤其是早晨的陽光，有助於穩定睡眠節律。"
+ },
+ "Spend an hour in daylight in one day.": {
+  "zh-Hans": "一天内在日光下待满一小时。",
+  "zh-Hant": "一天內在日光下待滿一小時。"
+ },
+ "Stage": {
+  "zh-Hans": "阶段",
+  "zh-Hant": "階段"
+ },
+ "Start": {
+  "zh-Hans": "开始",
+  "zh-Hant": "開始"
+ },
+ "Starts from a morning charge based on recovery and sleep, then drains with time awake, activity and elevated stress, and recharges a little during calm periods.": {
+  "zh-Hans": "以基于恢复和睡眠的晨间电量为起点，随清醒时间、活动和较高压力而消耗，并在平静时段少量回充。",
+  "zh-Hant": "以基於恢復和睡眠的晨間電量為起點，隨清醒時間、活動和較高壓力而消耗，並在平靜時段少量回充。"
+ },
+ "Steps": {
+  "zh-Hans": "步数",
+  "zh-Hant": "步數"
+ },
+ "Strength": {
+  "zh-Hans": "力量",
+  "zh-Hant": "力量"
+ },
+ "Stress": {
+  "zh-Hans": "压力",
+  "zh-Hant": "壓力"
+ },
+ "Stress has been elevated. Try a few minutes of slow breathing or a short walk outside.": {
+  "zh-Hans": "压力有些偏高。试试几分钟的缓慢呼吸，或到户外短暂散步。",
+  "zh-Hant": "壓力有些偏高。試試幾分鐘的緩慢呼吸，或到戶外短暫散步。"
+ },
+ "Stress today": {
+  "zh-Hans": "今日压力",
+  "zh-Hant": "今日壓力"
+ },
+ "Sun seeker": {
+  "zh-Hans": "追光者",
+  "zh-Hant": "追光者"
+ },
+ "Take it easy today": {
+  "zh-Hans": "今天放轻松",
+  "zh-Hant": "今天放輕鬆"
+ },
+ "The external assistant declined this request.": {
+  "zh-Hans": "外部助手拒绝了此请求。",
+  "zh-Hant": "外部助手拒絕了此請求。"
+ },
+ "The external assistant returned an error (%lld).": {
+  "zh-Hans": "外部助手返回错误（%lld）。",
+  "zh-Hant": "外部助手返回錯誤（%lld）。"
+ },
+ "The external assistant returned no answer.": {
+  "zh-Hans": "外部助手未返回回答。",
+  "zh-Hant": "外部助手未返回回答。"
+ },
+ "This device doesn't support HealthKit. You can explore VitalFlow with demo data in Settings.": {
+  "zh-Hans": "此设备不支持 HealthKit。你可以在设置中使用演示数据体验 VitalFlow。",
+  "zh-Hant": "此裝置不支援 HealthKit。你可以在設定中使用示範資料體驗 VitalFlow。"
+ },
+ "This removes settings, conversation history, cached scores, widget data and any stored API key from this device. Data in the Health app is not affected — manage it in the Health app.": {
+  "zh-Hans": "这将从本设备删除设置、对话记录、缓存的评分、小组件数据以及已存储的 API 密钥。“健康”App 中的数据不受影响——请在“健康”App 中管理。",
+  "zh-Hant": "這將從本裝置刪除設定、對話記錄、快取的評分、小工具資料以及已儲存的 API 金鑰。「健康」App 中的資料不受影響——請在「健康」App 中管理。"
+ },
+ "This week vs last week": {
+  "zh-Hans": "本周与上周对比",
+  "zh-Hant": "本週與上週對比"
+ },
+ "Three-day rhythm": {
+  "zh-Hans": "三日节奏",
+  "zh-Hant": "三日節奏"
+ },
+ "Time": {
+  "zh-Hans": "时间",
+  "zh-Hant": "時間"
+ },
+ "Time asleep": {
+  "zh-Hans": "睡眠时长",
+  "zh-Hant": "睡眠時長"
+ },
+ "Time in daylight": {
+  "zh-Hans": "日照时间",
+  "zh-Hant": "日照時間"
+ },
+ "To change what VitalFlow can read, open Health → Profile → Apps → VitalFlow. HealthKit doesn't tell apps which read permissions were denied, so missing data simply shows as “Not enough data”.": {
+  "zh-Hans": "如需更改 VitalFlow 可读取的数据，请打开“健康”→ 个人资料 → App → VitalFlow。HealthKit 不会告知 App 哪些读取权限被拒绝，因此缺失的数据会显示为“数据不足”。",
+  "zh-Hant": "如需更改 VitalFlow 可讀取的資料，請開啟「健康」→ 個人資料 → App → VitalFlow。HealthKit 不會告知 App 哪些讀取權限被拒絕，因此缺失的資料會顯示為「資料不足」。"
+ },
+ "Today": {
+  "zh-Hans": "今天",
+  "zh-Hant": "今天"
+ },
+ "Today's goals": {
+  "zh-Hans": "今日目标",
+  "zh-Hant": "今日目標"
+ },
+ "Today's load is high relative to recovery. Stretching and rest will help you bounce back.": {
+  "zh-Hans": "相对于恢复状态，今天的负荷偏高。拉伸和休息能帮助你恢复。",
+  "zh-Hant": "相對於恢復狀態，今天的負荷偏高。拉伸和休息能幫助你恢復。"
+ },
+ "Today's recovery estimate.": {
+  "zh-Hans": "今天的恢复估算。",
+  "zh-Hant": "今天的恢復估算。"
+ },
+ "Training readiness": {
+  "zh-Hans": "训练准备度",
+  "zh-Hant": "訓練準備度"
+ },
+ "Trends": {
+  "zh-Hans": "趋势",
+  "zh-Hant": "趨勢"
+ },
+ "Understand your recovery, sleep and energy — privately, on your own devices.": {
+  "zh-Hans": "在你自己的设备上，私密地了解你的恢复、睡眠与精力。",
+  "zh-Hant": "在你自己的裝置上，私密地瞭解你的恢復、睡眠與精力。"
+ },
+ "Unlocked": {
+  "zh-Hans": "已解锁",
+  "zh-Hant": "已解鎖"
+ },
+ "Updated %@": {
+  "zh-Hans": "更新于 %@",
+  "zh-Hant": "更新於 %@"
+ },
+ "Value": {
+  "zh-Hans": "数值",
+  "zh-Hant": "數值"
+ },
+ "VitalFlow is local-first. All health analysis happens on your iPhone and Apple Watch.": {
+  "zh-Hans": "VitalFlow 以本地优先。所有健康分析都在你的 iPhone 和 Apple Watch 上完成。",
+  "zh-Hant": "VitalFlow 以本地優先。所有健康分析都在你的 iPhone 和 Apple Watch 上完成。"
+ },
+ "VitalFlow needs at least 4 days of data to learn your baseline.": {
+  "zh-Hans": "VitalFlow 需要至少 4 天的数据来学习你的基线。",
+  "zh-Hant": "VitalFlow 需要至少 4 天的資料來學習你的基線。"
+ },
+ "VitalFlow provides experimental wellness estimates for general fitness and wellbeing. It is not a medical device and does not diagnose, treat or prevent any condition. Always consult a qualified health professional about medical concerns.": {
+  "zh-Hans": "VitalFlow 为一般健身与身心健康提供实验性估算。它不是医疗器械，不能诊断、治疗或预防任何疾病。如有医疗方面的疑虑，请务必咨询合格的医疗专业人员。",
+  "zh-Hant": "VitalFlow 為一般健身與身心健康提供實驗性估算。它不是醫療器械，不能診斷、治療或預防任何疾病。如有醫療方面的疑慮，請務必諮詢合格的醫療專業人員。"
+ },
+ "VitalFlow scores are experimental wellness estimates and are not intended to diagnose, treat, cure or prevent any disease.": {
+  "zh-Hans": "VitalFlow 评分为实验性健康估算，不用于诊断、治疗、治愈或预防任何疾病。",
+  "zh-Hant": "VitalFlow 評分為實驗性健康估算，不用於診斷、治療、治癒或預防任何疾病。"
+ },
+ "VitalFlow's scores are experimental wellness estimates based on your own data. They aren't clinically validated and can't diagnose or treat any condition. If you're worried about your health, talk to a professional.": {
+  "zh-Hans": "VitalFlow 的评分是基于你自身数据的实验性健康估算，未经临床验证，不能诊断或治疗任何疾病。如果你担心自己的健康状况，请咨询专业人士。",
+  "zh-Hant": "VitalFlow 的評分是基於你自身資料的實驗性健康估算，未經臨床驗證，不能診斷或治療任何疾病。如果你擔心自己的健康狀況，請諮詢專業人士。"
+ },
+ "Wake-ups": {
+  "zh-Hans": "醒来次数",
+  "zh-Hant": "醒來次數"
+ },
+ "Walk": {
+  "zh-Hans": "步行",
+  "zh-Hant": "步行"
+ },
+ "Walk 10,000 steps in a day.": {
+  "zh-Hans": "一天内步行一万步。",
+  "zh-Hant": "一天內步行一萬步。"
+ },
+ "Water": {
+  "zh-Hans": "饮水",
+  "zh-Hant": "飲水"
+ },
+ "Wear Apple Watch to sleep tonight to get this score.": {
+  "zh-Hans": "今晚佩戴 Apple Watch 睡觉即可获得此评分。",
+  "zh-Hant": "今晚佩戴 Apple Watch 睡覺即可獲得此評分。"
+ },
+ "Week": {
+  "zh-Hans": "周",
+  "zh-Hant": "周"
+ },
+ "Week in bloom": {
+  "zh-Hans": "一周花开",
+  "zh-Hant": "一週花開"
+ },
+ "Weekly report": {
+  "zh-Hans": "每周报告",
+  "zh-Hant": "每週報告"
+ },
+ "Weighted from sleep duration versus your need, efficiency, deep and REM share, interruptions and timing consistency.": {
+  "zh-Hans": "由睡眠时长（相对你的需求）、效率、深睡与 REM 占比、中断次数和作息规律性加权得出。",
+  "zh-Hant": "由睡眠時長（相對你的需求）、效率、深睡與 REM 佔比、中斷次數和作息規律性加權得出。"
+ },
+ "Well recovered": {
+  "zh-Hans": "恢复良好",
+  "zh-Hant": "恢復良好"
+ },
+ "Well watered": {
+  "zh-Hans": "滋润满满",
+  "zh-Hant": "滋潤滿滿"
+ },
+ "Wellness, not medicine": {
+  "zh-Hans": "关注健康，而非医疗",
+  "zh-Hant": "關注健康，而非醫療"
+ },
+ "What is my current activity and recovery balance?": {
+  "zh-Hans": "我现在的活动与恢复平衡如何？",
+  "zh-Hant": "我現在的活動與恢復平衡如何？"
+ },
+ "What we access": {
+  "zh-Hans": "我们访问什么",
+  "zh-Hant": "我們訪問什麼"
+ },
+ "What we share": {
+  "zh-Hans": "我们分享什么",
+  "zh-Hant": "我們分享什麼"
+ },
+ "What we store": {
+  "zh-Hans": "我们存储什么",
+  "zh-Hant": "我們儲存什麼"
+ },
+ "What went into it": {
+  "zh-Hans": "评分构成",
+  "zh-Hant": "評分構成"
+ },
+ "Why is my recovery score lower today?": {
+  "zh-Hans": "为什么我今天的恢复分数较低？",
+  "zh-Hant": "為什麼我今天的恢復分數較低？"
+ },
+ "Wind-down time": {
+  "zh-Hans": "放松时间",
+  "zh-Hant": "放鬆時間"
+ },
+ "With your permission, VitalFlow reads health and fitness data from Apple Health (such as heart rate, HRV, sleep, activity, workouts, VO2 max, daylight, weight and water) and writes water intake and Apple Watch workouts you record.": {
+  "zh-Hans": "经你允许，VitalFlow 会从 Apple 健康读取健康与健身数据（如心率、HRV、睡眠、活动、体能训练、最大摄氧量、日照、体重和饮水），并写入你记录的饮水量和 Apple Watch 体能训练。",
+  "zh-Hant": "經你允許，VitalFlow 會從 Apple 健康讀取健康與健身資料（如心率、HRV、睡眠、活動、體能訓練、最大攝氧量、日照、體重和飲水），並寫入你記錄的飲水量和 Apple Watch 體能訓練。"
+ },
+ "Workout": {
+  "zh-Hans": "体能训练",
+  "zh-Hant": "體能訓練"
+ },
+ "Wrist temperature": {
+  "zh-Hans": "手腕温度",
+  "zh-Hant": "手腕溫度"
+ },
+ "Year": {
+  "zh-Hans": "年",
+  "zh-Hant": "年"
+ },
+ "Yoga": {
+  "zh-Hans": "瑜伽",
+  "zh-Hant": "瑜珈"
+ },
+ "You can turn this off at any time; the key is deleted immediately.": {
+  "zh-Hans": "你可以随时关闭此功能，密钥会被立即删除。",
+  "zh-Hant": "你可以隨時關閉此功能，金鑰會被立即刪除。"
+ },
+ "You look well recovered. A good day for the workout you enjoy most.": {
+  "zh-Hans": "你看起来恢复得不错，今天很适合做你最喜欢的运动。",
+  "zh-Hant": "你看起來恢復得不錯，今天很適合做你最喜歡的運動。"
+ },
+ "You slept less than your goal. Going to bed 20–30 minutes earlier is a gentle way to catch up.": {
+  "zh-Hans": "你的睡眠少于目标。提早 20–30 分钟上床是一种温和的补觉方式。",
+  "zh-Hant": "你的睡眠少於目標。提早 20–30 分鐘上床是一種溫和的補覺方式。"
+ },
+ "You use your own API key, stored only in this device's Keychain. The provider's own privacy terms apply to data it receives.": {
+  "zh-Hans": "你使用自己的 API 密钥，它只存储在本设备的钥匙串中。服务提供商收到的数据适用其自身的隐私条款。",
+  "zh-Hant": "你使用自己的 API 金鑰，它只儲存在本裝置的鑰匙圈中。服務提供商收到的資料適用其自身的隱私條款。"
+ },
+ "Your body may appreciate an easier day: gentle movement, good food and an early night.": {
+  "zh-Hans": "你的身体可能需要轻松一点的一天：温和活动、好好吃饭、早点休息。",
+  "zh-Hant": "你的身體可能需要輕鬆一點的一天：溫和活動、好好吃飯、早點休息。"
+ },
+ "Your controls": {
+  "zh-Hans": "你的控制权",
+  "zh-Hant": "你的控制權"
+ },
+ "Your garden": {
+  "zh-Hans": "你的花园",
+  "zh-Hant": "你的花園"
+ },
+ "Your question and a small summary of your scores are sent to Anthropic (Claude) over an encrypted connection to generate an answer.": {
+  "zh-Hans": "你的问题和一份简短的评分摘要会通过加密连接发送给 Anthropic（Claude）以生成回答。",
+  "zh-Hant": "你的問題和一份簡短的評分摘要會透過加密連線傳送給 Anthropic（Claude）以生成回答。"
+ },
+ "Your sleep timing varied this week. Similar bed and wake times help your body clock.": {
+  "zh-Hans": "本周你的作息时间变化较大。相近的入睡和起床时间有助于生物钟。",
+  "zh-Hant": "本週你的作息時間變化較大。相近的入睡和起床時間有助於生物鐘。"
+ },
+ "Your usual bedtime is coming up. Dim the lights and let the day settle.": {
+  "zh-Hans": "快到你平时的就寝时间了。调暗灯光，让这一天慢慢沉静下来。",
+  "zh-Hant": "快到你平時的就寢時間了。調暗燈光，讓這一天慢慢沉靜下來。"
+ },
+ "bpm": {
+  "zh-Hans": "次/分",
+  "zh-Hant": "次/分"
+ },
+ "br/min": {
+  "zh-Hans": "次/分",
+  "zh-Hant": "次/分"
+ },
+ "kcal total": {
+  "zh-Hans": "千卡（总计）",
+  "zh-Hant": "千卡（總計）"
+ },
+ "min daylight": {
+  "zh-Hans": "分钟日照",
+  "zh-Hant": "分鐘日照"
+ }
+}

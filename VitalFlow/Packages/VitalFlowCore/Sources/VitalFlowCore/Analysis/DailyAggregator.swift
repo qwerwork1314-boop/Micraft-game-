@@ -9,9 +9,20 @@ public struct DailyAggregator: Sendable {
 
     /// Splits a cumulative total across local days, proportionally to time (midnight-safe, DST-safe).
     public func cumulativeTotals(_ samples: [QuantitySample], days: [DayKey]) -> [DayKey: Double] {
+        // Bucket samples by every local day they touch so each day only scans its own samples.
+        var buckets: [DayKey: [QuantitySample]] = [:]
+        for s in samples {
+            var d = DayKey(s.start, calendar: calendar)
+            let last = DayKey(s.end > s.start ? s.end.addingTimeInterval(-0.001) : s.start, calendar: calendar)
+            buckets[d, default: []].append(s)
+            while d < last {
+                d = d.adding(days: 1, calendar: calendar)
+                buckets[d, default: []].append(s)
+            }
+        }
         var out: [DayKey: Double] = [:]
         for d in days {
-            let total = Deduplicator.mergedCumulativeTotal(samples, start: d.startDate(in: calendar), end: d.endDate(in: calendar))
+            let total = Deduplicator.mergedCumulativeTotal(buckets[d] ?? [], start: d.startDate(in: calendar), end: d.endDate(in: calendar))
             if total > 0 { out[d] = total }
         }
         return out
@@ -59,16 +70,27 @@ public struct DailyAggregator: Sendable {
         for kind in MetricKind.allCases where kind.isCumulative {
             cumulative[kind] = cumulativeTotals(byKind[kind] ?? [], days: days)
         }
-        return days.map { day in
+        // De-duplicate discrete metrics once, then bucket by local start day.
+        var discrete: [MetricKind: [DayKey: [QuantitySample]]] = [:]
+        for kind in MetricKind.allCases where !kind.isCumulative {
+            discrete[kind] = Dictionary(grouping: Deduplicator.dedupeDiscrete(byKind[kind] ?? []),
+                                        by: { DayKey($0.start, calendar: calendar) })
+        }
+        func around(_ kind: MetricKind, _ day: DayKey) -> [QuantitySample] {
+            (discrete[kind]?[day.adding(days: -1, calendar: calendar)] ?? []) + (discrete[kind]?[day] ?? [])
+        }
+        var lastVO2: Double?, lastMass: Double?
+        return days.sorted().map { day in
             var m = DailyMetrics(day: day)
-            m.sleep = analyzer.night(for: day, samples: sleep)
-            m.restingHeartRate = dailyMean(byKind[.restingHeartRate] ?? [], kind: .restingHeartRate, day: day)
-            m.hrv = nightlyHRV(byKind[.hrvSDNN] ?? [], day: day, sleep: m.sleep)
-            m.averageHeartRate = dailyMean(byKind[.heartRate] ?? [], kind: .heartRate, day: day)
-            m.oxygenSaturation = dailyMean(byKind[.oxygenSaturation] ?? [], kind: .oxygenSaturation, day: day)
-            m.respiratoryRate = duringSleep(byKind[.respiratoryRate] ?? [], kind: .respiratoryRate, sleep: m.sleep)
-                ?? dailyMean(byKind[.respiratoryRate] ?? [], kind: .respiratoryRate, day: day)
-            m.wristTemperature = dailyMean(byKind[.wristTemperature] ?? [], kind: .wristTemperature, day: day)
+            let sleepWindow = analyzer.window(for: day)
+            m.sleep = analyzer.night(for: day, samples: sleep.filter { $0.end > sleepWindow.start && $0.start < sleepWindow.end })
+            m.restingHeartRate = dailyMean(discrete[.restingHeartRate]?[day] ?? [], kind: .restingHeartRate, day: day)
+            m.hrv = nightlyHRV(around(.hrvSDNN, day), day: day, sleep: m.sleep)
+            m.averageHeartRate = dailyMean(discrete[.heartRate]?[day] ?? [], kind: .heartRate, day: day)
+            m.oxygenSaturation = dailyMean(discrete[.oxygenSaturation]?[day] ?? [], kind: .oxygenSaturation, day: day)
+            m.respiratoryRate = duringSleep(around(.respiratoryRate, day), kind: .respiratoryRate, sleep: m.sleep)
+                ?? dailyMean(discrete[.respiratoryRate]?[day] ?? [], kind: .respiratoryRate, day: day)
+            m.wristTemperature = dailyMean(discrete[.wristTemperature]?[day] ?? [], kind: .wristTemperature, day: day)
             m.steps = cumulative[.stepCount]?[day]
             m.distance = cumulative[.distanceWalkingRunning]?[day]
             m.activeEnergy = cumulative[.activeEnergy]?[day]
@@ -76,8 +98,11 @@ public struct DailyAggregator: Sendable {
             m.exerciseMinutes = cumulative[.exerciseMinutes]?[day]
             m.daylightMinutes = cumulative[.timeInDaylight]?[day]
             m.waterML = cumulative[.dietaryWater]?[day]
-            m.bodyMass = dailyMean(byKind[.bodyMass] ?? [], kind: .bodyMass, day: day)
-            m.vo2Max = dailyMean(byKind[.vo2Max] ?? [], kind: .vo2Max, day: day)
+            // Sparse metrics carry forward the latest known value.
+            if let v = dailyMean(discrete[.vo2Max]?[day] ?? [], kind: .vo2Max, day: day) { lastVO2 = v }
+            if let v = dailyMean(discrete[.bodyMass]?[day] ?? [], kind: .bodyMass, day: day) { lastMass = v }
+            m.vo2Max = lastVO2
+            m.bodyMass = lastMass
             m.trainingLoad = TrainingLoad.dailyLoad(day: day, workouts: workouts, restingHR: m.restingHeartRate,
                                                     profile: profile, calendar: calendar)
             return m

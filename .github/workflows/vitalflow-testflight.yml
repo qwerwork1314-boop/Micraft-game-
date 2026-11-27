@@ -1,0 +1,106 @@
+name: VitalFlow TestFlight
+
+# Manually triggered. Archives, signs (Xcode automatic signing with an App Store Connect
+# API key) and uploads the build to App Store Connect / TestFlight.
+# Required repository secrets (Settings → Secrets and variables → Actions):
+#   APPLE_TEAM_ID                 10-character Team ID
+#   VF_BUNDLE_PREFIX              e.g. com.yourname.vitalflow (must match identifiers registered in your account)
+#   ASC_KEY_ID                    App Store Connect API key ID
+#   ASC_ISSUER_ID                 App Store Connect API issuer ID
+#   ASC_PRIVATE_KEY_BASE64        base64 of the AuthKey_XXXX.p8 file
+# Nothing secret is stored in the repository.
+
+on:
+  workflow_dispatch:
+    inputs:
+      marketing_version:
+        description: "Version shown in TestFlight (e.g. 0.1.0)"
+        required: true
+        default: "0.1.0"
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    working-directory: VitalFlow
+
+jobs:
+  testflight:
+    runs-on: macos-15
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: latest-stable
+      - name: Check secrets are configured
+        env:
+          TEAM: ${{ secrets.APPLE_TEAM_ID }}
+          PREFIX: ${{ secrets.VF_BUNDLE_PREFIX }}
+          KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ISSUER: ${{ secrets.ASC_ISSUER_ID }}
+          KEY: ${{ secrets.ASC_PRIVATE_KEY_BASE64 }}
+        run: |
+          for v in TEAM PREFIX KEY_ID ISSUER KEY; do
+            if [ -z "${!v}" ]; then echo "::error::Missing secret for $v (see README)"; exit 1; fi
+          done
+      - name: Install XcodeGen and generate project
+        run: brew install xcodegen && xcodegen generate
+      - name: Write API key to a temporary file
+        env:
+          KEY: ${{ secrets.ASC_PRIVATE_KEY_BASE64 }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/asc"
+          echo "$KEY" | base64 --decode > "$RUNNER_TEMP/asc/AuthKey.p8"
+          chmod 600 "$RUNNER_TEMP/asc/AuthKey.p8"
+      - name: Archive
+        env:
+          TEAM: ${{ secrets.APPLE_TEAM_ID }}
+          PREFIX: ${{ secrets.VF_BUNDLE_PREFIX }}
+          KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ISSUER: ${{ secrets.ASC_ISSUER_ID }}
+        run: |
+          set -o pipefail
+          xcodebuild archive \
+            -project VitalFlow.xcodeproj -scheme VitalFlow \
+            -destination "generic/platform=iOS" \
+            -archivePath "$RUNNER_TEMP/VitalFlow.xcarchive" \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath "$RUNNER_TEMP/asc/AuthKey.p8" \
+            -authenticationKeyID "$KEY_ID" \
+            -authenticationKeyIssuerID "$ISSUER" \
+            DEVELOPMENT_TEAM="$TEAM" \
+            VF_BUNDLE_PREFIX="$PREFIX" \
+            CODE_SIGN_STYLE=Automatic \
+            MARKETING_VERSION="${{ inputs.marketing_version }}" \
+            CURRENT_PROJECT_VERSION="${{ github.run_number }}" | xcpretty
+      - name: Export and upload to App Store Connect
+        env:
+          TEAM: ${{ secrets.APPLE_TEAM_ID }}
+          KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ISSUER: ${{ secrets.ASC_ISSUER_ID }}
+        run: |
+          cat > "$RUNNER_TEMP/ExportOptions.plist" <<PLIST
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+          <plist version="1.0"><dict>
+            <key>method</key><string>app-store-connect</string>
+            <key>destination</key><string>upload</string>
+            <key>teamID</key><string>$TEAM</string>
+            <key>signingStyle</key><string>automatic</string>
+            <key>uploadSymbols</key><true/>
+            <key>manageAppVersionAndBuildNumber</key><false/>
+          </dict></plist>
+          PLIST
+          xcodebuild -exportArchive \
+            -archivePath "$RUNNER_TEMP/VitalFlow.xcarchive" \
+            -exportOptionsPlist "$RUNNER_TEMP/ExportOptions.plist" \
+            -exportPath "$RUNNER_TEMP/export" \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath "$RUNNER_TEMP/asc/AuthKey.p8" \
+            -authenticationKeyID "$KEY_ID" \
+            -authenticationKeyIssuerID "$ISSUER"
+      - name: Remove API key
+        if: always()
+        run: rm -rf "$RUNNER_TEMP/asc"

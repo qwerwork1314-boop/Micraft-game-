@@ -1,0 +1,7 @@
+// VitalFlow shared build settings.
+// Change VF_BUNDLE_PREFIX to a reverse-DNS identifier you own (e.g. com.yourname.vitalflow).
+// CI overrides both values from repository variables/secrets; nothing secret lives here.
+VF_BUNDLE_PREFIX = com.example.vitalflow
+DEVELOPMENT_TEAM =
+MARKETING_VERSION = 0.1.0
+CURRENT_PROJECT_VERSION = 1
