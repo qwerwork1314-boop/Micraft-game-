@@ -32,7 +32,7 @@ VitalFlow/
 ├── project.yml                 # XcodeGen 工程定義（生成 VitalFlow.xcodeproj）
 ├── Config/Base.xcconfig        # Bundle ID 字首、版本號（無任何金鑰）
 ├── Packages/VitalFlowCore/     # 純 Swift 套件：模型、去重、睡眠合併、基線、全部評分演算法、助手、遊戲化、示範資料
-│   └── Tests/                  # 63 個單元測試（缺失資料、重複記錄、日期邊界、夏令時等）
+│   └── Tests/                  # 68 個單元測試（缺失資料、重複記錄、日期邊界、夏令時等）
 ├── Shared/Common/              # iPhone/Watch/小工具共用：品牌色、快照、Localizable.xcstrings
 ├── Shared/Health/              # HealthKit 封裝 + 資料倉儲（真實資料 / 示範資料）
 ├── iOS/                        # iPhone App（SwiftUI + Swift Charts + SwiftData）
@@ -149,6 +149,9 @@ VitalFlow/
 
 ## 8. 常見問題
 
+- **完全沒有資料**：在 VitalFlow 開啟 **設定 → 健康連線**，會顯示是否已要求權限、每種資料可讀取的筆數以及確切錯誤。若顯示「此版本的 VitalFlow 無法使用 Apple 健康」，代表免費側載的安裝沒有包含健康權限，請使用示範模式或 TestFlight。
+- **AI 教練**：需要 iOS 26 以上、支援 Apple Intelligence 的 iPhone（iPhone 15 Pro 或更新機型），並在「設定 → Apple Intelligence 與 Siri」中開啟。AI 教練完全在 iPhone 上執行、免費、不需 API 金鑰，會先查詢你的睡眠、心率、趨勢、體能訓練與目標資料再回答；「今天」頁面會顯示每日 AI 簡報，每個分數都有「向教練詢問這項」按鈕。
+
 - **CI 報 「No profiles for … were found」**：確認第 5 節的 4 個 App ID 已建立且 Capabilities 勾選正確，API 金鑰為 Admin 權限，`VF_BUNDLE_PREFIX` 與註冊的一致。
 - **想手動管理憑證**：在開發者網站建立 Apple Distribution 憑證和 4 個 App Store 描述檔，把 `.p12`（base64）和描述檔作為 Secrets 匯入執行器鑰匙串，並將 `CODE_SIGN_STYLE` 改為 Manual。預設的自動簽名方式更簡單。
 - **所有分數都顯示「資料不足」**：需要至少 4 天佩戴 Apple Watch（含睡眠）的資料來建立個人基線；請在「健康」App → 個人資料 → App → VitalFlow 中確認已允許讀取。HealthKit 不會告訴 App 哪些讀取權限被拒絕，所以被拒絕和沒有資料看起來一樣。
@@ -186,7 +189,7 @@ python3 scripts/build_strings.py                  # 修改介面文字後重新�
 
 ## 11. 測試與驗證狀態（誠實說明）
 
-- ✅ **VitalFlowCore 63 個單元測試**在 Linux（Swift 6.0）上已執行並全部通過：健康評分、缺失資料、重複記錄、跨午夜與夏令時日期邊界、睡眠重疊樣本、多資料來源、遊戲化、助手意圖識別。
+- ✅ **VitalFlowCore 68 個單元測試**在 Linux（Swift 6.0）上已執行並全部通過：健康評分、缺失資料、重複記錄、跨午夜與夏令時日期邊界、睡眠重疊樣本、多資料來源、遊戲化、助手意圖識別。
 - ✅ **iOS / watchOS 編譯與模擬器測試**已在 GitHub Actions macOS 執行器上通過（CI 第 4 次執行）：iPhone App（含內嵌 Watch App 與兩個小工具擴充套件）編譯成功，iPhone 模擬器單元測試通過，watchOS App 單獨編譯成功。
 - ❌ **尚未在真機（iPhone / Apple Watch）上測試**。HealthKit 授權流程、背景推送、WatchConnectivity 同步、體能訓練會話、小工具和複雜功能在真機上的表現都需要你透過 TestFlight 安裝後驗證。
 

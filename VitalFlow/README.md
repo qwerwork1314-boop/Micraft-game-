@@ -32,7 +32,7 @@ VitalFlow/
 ├── project.yml                 # XcodeGen 工程定义（生成 VitalFlow.xcodeproj）
 ├── Config/Base.xcconfig        # Bundle ID 前缀、版本号（无任何密钥）
 ├── Packages/VitalFlowCore/     # 纯 Swift 包：模型、去重、睡眠合并、基线、全部评分算法、助手、游戏化、演示数据
-│   └── Tests/                  # 63 个单元测试（缺失数据、重复记录、日期边界、夏令时等）
+│   └── Tests/                  # 68 个单元测试（缺失数据、重复记录、日期边界、夏令时等）
 ├── Shared/Common/              # iPhone/Watch/小组件共用：品牌色、快照、Localizable.xcstrings
 ├── Shared/Health/              # HealthKit 封装 + 数据仓库（真实数据 / 演示数据）
 ├── iOS/                        # iPhone App（SwiftUI + Swift Charts + SwiftData）
@@ -149,6 +149,9 @@ VitalFlow/
 
 ## 8. 常见问题
 
+- **完全没有数据**：在 VitalFlow 打开 **设置 → 健康连接**，会显示是否已请求权限、每种数据可读取的条数以及确切错误。若显示“此版本的 VitalFlow 无法使用 Apple 健康”，说明免费侧载的安装没有包含健康权限，请使用演示模式或 TestFlight。
+- **AI 教练**：需要 iOS 26 及以上、支持 Apple 智能的 iPhone（iPhone 15 Pro 或更新机型），并在“设置 → Apple 智能与 Siri”中开启。AI 教练完全在 iPhone 上运行、免费、无需 API 密钥。
+
 - **CI 报 “No profiles for … were found”**：确认第 5 节的 4 个 App ID 已创建且 Capabilities 勾选正确，API 密钥为 Admin 权限，`VF_BUNDLE_PREFIX` 与注册的一致。
 - **想手动管理证书**：在开发者网站创建 Apple Distribution 证书和 4 个 App Store 描述文件，把 `.p12`（base64）和描述文件作为 Secrets 导入运行器钥匙串，并将 `CODE_SIGN_STYLE` 改为 Manual。默认的自动签名方式更简单。
 - **所有分数都显示“数据不足”**：需要至少 4 天佩戴 Apple Watch（含睡眠）的数据来建立个人基线；请在“健康”App → 个人资料 → App → VitalFlow 中确认已允许读取。HealthKit 不会告诉 App 哪些读取权限被拒绝，所以被拒绝和没有数据看起来一样。
@@ -186,7 +189,7 @@ python3 scripts/build_strings.py                  # 修改界面文字后重新�
 
 ## 11. 测试与验证状态（诚实说明）
 
-- ✅ **VitalFlowCore 63 个单元测试**在 Linux（Swift 6.0）上已运行并全部通过：健康评分、缺失数据、重复记录、跨午夜与夏令时日期边界、睡眠重叠样本、多数据源、游戏化、助手意图识别。
+- ✅ **VitalFlowCore 68 个单元测试**在 Linux（Swift 6.0）上已运行并全部通过：健康评分、缺失数据、重复记录、跨午夜与夏令时日期边界、睡眠重叠样本、多数据源、游戏化、助手意图识别。
 - ✅ **iOS / watchOS 编译与模拟器测试**已在 GitHub Actions macOS 运行器上通过（CI 第 4 次运行）：iPhone App（含内嵌 Watch App 与两个小组件扩展）编译成功，iPhone 模拟器单元测试通过，watchOS App 单独编译成功。
 - ❌ **尚未在真机（iPhone / Apple Watch）上测试**。HealthKit 授权流程、后台推送、WatchConnectivity 同步、体能训练会话、小组件和复杂功能在真机上的表现都需要你通过 TestFlight 安装后验证。
 

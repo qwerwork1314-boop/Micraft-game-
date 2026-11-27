@@ -18,7 +18,7 @@ VitalFlow is a native **Swift / SwiftUI** app for iPhone and Apple Watch. It rea
 | Today | Recovery, Body Battery, stress, training readiness, current and resting heart rate, HRV, last night's sleep, activity rings, calories, hydration, suggestions, interactive charts |
 | Sleep | Stage timeline, duration, efficiency, consistency, wake-ups, sleeping heart rate and respiratory rate, day/week/month/year reports, suggestions; handles overlapping samples and multiple sources |
 | Trends | 7-day / 30-day / 90-day / 1-year charts for HRV, resting HR, sleep, steps, energy, respiratory rate, blood oxygen, VO₂ max, weight, daylight and water |
-| Coach | On-device assistant that explains your trends. It never diagnoses or recommends medication. An optional external AI (Anthropic Claude) requires explicit consent and only receives rounded summary numbers |
+| Coach | **AI coach on Apple Intelligence** (iOS 26+, iPhone 15 Pro or newer): runs on your iPhone, free, no API key, looks up your own sleep, heart, trend, workout and goal data before answering, plus a daily AI briefing on Today and “Ask Coach” on every score. On other iPhones a built-in assistant explains your trends. It never diagnoses or recommends medication. An optional external AI (Anthropic Claude) requires explicit consent and only receives rounded summary numbers |
 | Garden | Daily goals (kept within healthy ranges), badges, weekly report, a virtual garden that grows with healthy habits, optional gentle reminders |
 | Apple Watch | Score summary, heart rate, activity, water logging, workouts with live heart rate, complications, sync with iPhone |
 | Widgets | Home screen (small/medium) and lock screen |
@@ -79,6 +79,9 @@ Accept the wellness disclaimer → **Connect Health** → choose the data to sha
 
 ## 4. Troubleshooting
 
+- **No data at all** — open VitalFlow **Settings → Health connection**. It shows whether Health access was requested, how many samples it can read per data type, and the exact error. If it says *“This copy of VitalFlow can't use Apple Health”*, the free sideloaded install doesn't include the Health permission; use Demo mode or TestFlight.
+- **AI coach not active** — needs iOS 26+, an iPhone that supports Apple Intelligence (iPhone 15 Pro or newer) and Apple Intelligence turned on in Settings → Apple Intelligence & Siri. The Coach screen says which requirement is missing.
+
 - **All scores say “Not enough data”** — wear the watch to sleep for a few nights; check Health app → Profile → Apps → VitalFlow permissions. HealthKit doesn't tell apps which permissions were denied.
 - **No sleep stages** — set up Sleep Focus / sleep tracking in the Health app and wear the watch in bed.
 - **Blood oxygen or wrist temperature missing** — not available on every model or in every country; scores adjust and lower their confidence.
@@ -89,7 +92,7 @@ Accept the wellness disclaimer → **Connect Health** → choose the data to sha
 ```
 VitalFlow/
 ├── project.yml              XcodeGen project definition (generates VitalFlow.xcodeproj in CI)
-├── Packages/VitalFlowCore/  Platform-independent models, de-duplication, sleep merging, baselines, scores, assistant, garden (63 tests)
+├── Packages/VitalFlowCore/  Platform-independent models, de-duplication, sleep merging, baselines, scores, assistant, garden (68 tests)
 ├── Shared/                  Code shared by iPhone, Watch and widgets; HealthKit service; String Catalog
 ├── iOS/  Watch/  Widgets/  WatchWidgets/  Tests/
 ├── scripts/                 Icon generator, localisation builder/checker
@@ -98,6 +101,6 @@ VitalFlow/
 
 ## 6. Verification status (honest)
 
-- ✅ 63 VitalFlowCore unit tests pass on Linux and macOS (scores, missing data, duplicate records, midnight/DST boundaries, overlapping sleep sources).
+- ✅ 68 VitalFlowCore unit tests pass on Linux and macOS (scores, missing data, duplicate records, midnight/DST boundaries, overlapping sleep sources).
 - ✅ GitHub Actions on macOS: iPhone app (with embedded Watch app and both widget extensions) compiles, iPhone-simulator tests pass, watchOS app compiles, unsigned IPA builds.
 - ❌ **Not yet tested on a real iPhone or Apple Watch.** HealthKit permissions, background updates, Watch sync, workouts, widgets and complications need checking on your devices.

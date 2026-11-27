@@ -30,7 +30,7 @@
 | Minimised external-AI payload (no identifiers/timestamps) | ✅ |
 | Deterministic, labelled demo data | ✅ |
 
-63 tests (incl. a 365-day performance test), run on Linux (Swift 6.0) in the development container — all passing. CI also runs them on Linux and macOS.
+68 tests (incl. a 365-day performance test), run on Linux (Swift 6.0) in the development container — all passing. CI also runs them on Linux and macOS.
 
 ## iPhone app
 
@@ -43,7 +43,10 @@
 | Score detail screens with components & confidence | 🟢 |
 | Sleep page: stage timeline, day/week/month/year, consistency, sleep HR, resp. rate, suggestions | 🟢 |
 | Trends page with interactive charts | 🟢 |
-| Coach (on-device) + chat history in SwiftData | 🟢 |
+| Coach (on-device rules) + chat history in SwiftData | 🟢 |
+| AI coach on Apple Intelligence (Foundation Models, iOS 26+, on-device, tool calls into the user's data) | 🟡 — compiles in CI; needs an Apple Intelligence iPhone to verify answers |
+| Daily AI briefing on Today, “Ask Coach” from score details | 🟡 |
+| Health connection diagnostics (permission status, per-type counts, errors) | 🟢 📱 |
 | Optional external AI (consent, Keychain key, minimised payload) | 🟢 — not tested against the live API |
 | Garden, goals editor, badges, weekly report | 🟢 |
 | Gentle reminders (local notifications) | 🟡 📱 |
@@ -82,5 +85,4 @@
 | Export of reports (PDF/CSV) | 📝 |
 | HealthKit `HKAnchoredObjectQuery`-based incremental sync cache (currently full re-query) | 📝 |
 | Siri / App Intents shortcuts, Live Activity during workouts | 📝 |
-| On-device LLM (Apple Foundation Models) for free-form assistant answers | 📝 |
 | Snapshot/UI tests and accessibility audit | 📝 |
