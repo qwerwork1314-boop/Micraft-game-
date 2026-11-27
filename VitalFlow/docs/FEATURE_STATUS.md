@@ -47,6 +47,7 @@
 | AI coach on Apple Intelligence (Foundation Models, iOS 26+, on-device, tool calls into the user's data) | 🟡 — compiles in CI; needs an Apple Intelligence iPhone to verify answers |
 | Daily AI briefing on Today, “Ask Coach” from score details | 🟡 |
 | Health connection diagnostics (permission status, per-type counts, errors) | 🟢 📱 |
+| Start workouts / 40-second heart-rate checks on Apple Watch from iPhone (startWatchApp + iOS 17 session mirroring, live values, pause/end from phone, heart-check history) | 🟢 📱 — compiles, unit-tested result calculation; needs a real iPhone + Apple Watch with the watch app installed |
 | Optional external AI (consent, Keychain key, minimised payload) | 🟢 — not tested against the live API |
 | Garden, goals editor, badges, weekly report | 🟢 |
 | Gentle reminders (local notifications) | 🟡 📱 |
