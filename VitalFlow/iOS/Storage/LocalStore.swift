@@ -59,8 +59,22 @@ final class DailyScoreRecord {
     }
 }
 
+/// Result of a quick heart-rate check started from the app (measured by Apple Watch).
+@Model
+final class HeartCheckRecord {
+    var id: UUID
+    var date: Date
+    var bpm: Double
+
+    init(bpm: Double, date: Date = Date()) {
+        self.id = UUID()
+        self.date = date
+        self.bpm = bpm
+    }
+}
+
 enum LocalStore {
-    static let schema = Schema([ChatMessageRecord.self, AchievementRecord.self, DailyScoreRecord.self])
+    static let schema = Schema([ChatMessageRecord.self, AchievementRecord.self, DailyScoreRecord.self, HeartCheckRecord.self])
 
     /// SwiftData store in Application Support with complete file protection
     /// (encrypted at rest and unreadable while the device is locked).
@@ -83,6 +97,7 @@ enum LocalStore {
         try? context.delete(model: ChatMessageRecord.self)
         try? context.delete(model: AchievementRecord.self)
         try? context.delete(model: DailyScoreRecord.self)
+        try? context.delete(model: HeartCheckRecord.self)
         try? context.save()
     }
 }

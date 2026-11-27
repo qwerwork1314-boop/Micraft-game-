@@ -80,6 +80,8 @@ final class AppModel {
 
     func start() {
         PhoneConnectivity.shared.activate(model: self)
+        WatchWorkoutRemote.shared.install()
+        AppModelBridge.refresh = { [weak self] in await self?.refresh() }
         if !settings.demoMode {
             HealthKitService.shared.observeChanges { [weak self] in
                 Task { @MainActor in await self?.refresh() }

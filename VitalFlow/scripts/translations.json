@@ -87,6 +87,10 @@
   "zh-Hans": "Apple 智能 · 设备端",
   "zh-Hant": "Apple Intelligence · 裝置端"
  },
+ "Apple Watch didn't respond. Make sure it's on your wrist, unlocked and nearby, and that the VitalFlow watch app is installed.": {
+  "zh-Hans": "Apple Watch 没有响应。请确认手表戴在手腕上、已解锁、在附近，并已安装 VitalFlow 手表 App。",
+  "zh-Hant": "Apple Watch 沒有回應。請確認手錶戴在手腕上、已解鎖、在附近，並已安裝 VitalFlow 手錶 App。"
+ },
  "Ask Coach": {
   "zh-Hans": "问教练",
   "zh-Hant": "問教練"
@@ -251,6 +255,10 @@
   "zh-Hans": "核心",
   "zh-Hant": "核心"
  },
+ "Couldn't reach Apple Watch.": {
+  "zh-Hans": "无法连接 Apple Watch。",
+  "zh-Hant": "無法連接 Apple Watch。"
+ },
  "Couldn't save to Health. Check VitalFlow's write permission in the Health app.": {
   "zh-Hans": "无法保存到“健康”。请在“健康”App 中检查 VitalFlow 的写入权限。",
   "zh-Hant": "無法儲存到「健康」。請在「健康」App 中檢查 VitalFlow 的寫入權限。"
@@ -322,6 +330,10 @@
  "Demo mode is on. Values shown are synthetic and not your health data.": {
   "zh-Hans": "演示模式已开启。显示的数值为合成数据，并非你的健康数据。",
   "zh-Hant": "示範模式已開啟。顯示的數值為合成資料，並非你的健康資料。"
+ },
+ "Distance": {
+  "zh-Hans": "距离",
+  "zh-Hant": "距離"
  },
  "Done": {
   "zh-Hans": "完成",
@@ -507,6 +519,10 @@
   "zh-Hans": "睡眠期间心率",
   "zh-Hant": "睡眠期間心率"
  },
+ "Heart rate measured": {
+  "zh-Hans": "心率测量完成",
+  "zh-Hant": "心率測量完成"
+ },
  "Heart rate variability": {
   "zh-Hans": "心率变异性",
   "zh-Hant": "心率變異性"
@@ -514,6 +530,10 @@
  "High confidence": {
   "zh-Hans": "高可信度",
   "zh-Hant": "高可信度"
+ },
+ "Hike": {
+  "zh-Hans": "徒步",
+  "zh-Hant": "健行"
  },
  "Hour": {
   "zh-Hans": "小时",
@@ -583,6 +603,10 @@
   "zh-Hans": "继续佩戴手表以解锁更多洞察。",
   "zh-Hant": "繼續佩戴手錶以解鎖更多洞察。"
  },
+ "Last check: %d bpm": {
+  "zh-Hans": "上次测量：%d 次/分",
+  "zh-Hant": "上次測量：%d 次/分"
+ },
  "Last night": {
   "zh-Hans": "昨晚",
   "zh-Hant": "昨晚"
@@ -631,6 +655,30 @@
   "zh-Hans": "你可以随时在“健康”App 中管理权限。使用“设置 → 删除所有 VitalFlow 数据”即可清除 VitalFlow 在本设备上存储的所有内容。",
   "zh-Hant": "你可以隨時在「健康」App 中管理權限。使用「設定 → 刪除所有 VitalFlow 資料」即可清除 VitalFlow 在本裝置上儲存的所有內容。"
  },
+ "Measure": {
+  "zh-Hans": "测量",
+  "zh-Hant": "測量"
+ },
+ "Measure again": {
+  "zh-Hans": "再测一次",
+  "zh-Hant": "再測一次"
+ },
+ "Measure now": {
+  "zh-Hans": "立即测量",
+  "zh-Hant": "立即測量"
+ },
+ "Measurements come from Apple Watch. iPhone has no heart-rate sensor; VitalFlow wakes the watch app for you, so you don't need to open it.": {
+  "zh-Hans": "测量数据来自 Apple Watch。iPhone 没有心率传感器；VitalFlow 会帮你唤醒手表 App，你不需要手动打开。",
+  "zh-Hant": "測量資料來自 Apple Watch。iPhone 沒有心率感測器；VitalFlow 會幫你喚醒手錶 App，你不需要手動打開。"
+ },
+ "Measures for about 40 seconds on Apple Watch. Sit still with the watch snug on your wrist. The check isn't saved as a workout.": {
+  "zh-Hans": "在 Apple Watch 上测量约 40 秒。请坐稳不动，并让手表贴紧手腕。这次测量不会被保存为体能训练。",
+  "zh-Hant": "在 Apple Watch 上測量約 40 秒。請坐好不動，並讓手錶貼緊手腕。這次測量不會被儲存為體能訓練。"
+ },
+ "Measuring… keep your wrist still": {
+  "zh-Hans": "正在测量…请保持手腕不动",
+  "zh-Hant": "正在測量…請保持手腕不動"
+ },
  "Medium confidence": {
   "zh-Hans": "中等可信度",
   "zh-Hant": "中等可信度"
@@ -675,6 +723,10 @@
   "zh-Hans": "小睡",
   "zh-Hant": "小睡"
  },
+ "No Apple Watch is paired with this iPhone. Heart-rate checks and workout tracking need Apple Watch.": {
+  "zh-Hans": "此 iPhone 没有配对 Apple Watch。心率测量和体能训练追踪需要 Apple Watch。",
+  "zh-Hant": "此 iPhone 沒有配對 Apple Watch。心率測量和體能訓練追蹤需要 Apple Watch。"
+ },
  "No Health data found": {
   "zh-Hans": "未找到健康数据",
   "zh-Hant": "找不到健康資料"
@@ -698,6 +750,10 @@
  "Not enough heart rate readings at rest yet today.": {
   "zh-Hans": "今天静止状态下的心率读数还不够。",
   "zh-Hant": "今天靜止狀態下的心率讀數還不夠。"
+ },
+ "Not enough readings. Make sure the watch is snug and try again.": {
+  "zh-Hans": "读数不足。请确认手表贴紧手腕后再试一次。",
+  "zh-Hant": "讀數不足。請確認手錶貼緊手腕後再試一次。"
  },
  "Not medical advice": {
   "zh-Hans": "非医疗建议",
@@ -739,6 +795,10 @@
   "zh-Hans": "可选功能，默认关闭。VitalFlow 绝不会发送制造内疚感或断签警告的通知。",
   "zh-Hant": "可選功能，預設關閉。VitalFlow 絕不會傳送製造內疚感或斷籤警告的通知。"
  },
+ "Pause": {
+  "zh-Hans": "暂停",
+  "zh-Hant": "暫停"
+ },
  "Period": {
   "zh-Hans": "周期",
   "zh-Hant": "週期"
@@ -759,6 +819,10 @@
   "zh-Hans": "有关诊断或药物的问题绝不会被发送，而是在设备端回答并建议你咨询专业人士。",
   "zh-Hant": "有關診斷或藥物的問題絕不會被發送，而是在裝置端回答並建議你諮詢專業人士。"
  },
+ "Quick heart rate": {
+  "zh-Hans": "快速心率测量",
+  "zh-Hant": "快速心率測量"
+ },
  "Range": {
   "zh-Hans": "范围",
   "zh-Hant": "範圍"
@@ -770,6 +834,10 @@
  "Ready to push": {
   "zh-Hans": "可以加强训练",
   "zh-Hant": "可以加強訓練"
+ },
+ "Recent heart checks": {
+  "zh-Hans": "最近的心率测量",
+  "zh-Hant": "最近的心率測量"
  },
  "Recovery": {
   "zh-Hans": "恢复",
@@ -814,6 +882,10 @@
  "Resting heart rate for today isn't available yet.": {
   "zh-Hans": "今天的静息心率暂不可用。",
   "zh-Hant": "今天的靜息心率暫不可用。"
+ },
+ "Resume": {
+  "zh-Hans": "继续",
+  "zh-Hant": "繼續"
  },
  "Review Health permissions": {
   "zh-Hans": "查看健康权限",
@@ -919,6 +991,10 @@
   "zh-Hans": "开始",
   "zh-Hant": "開始"
  },
+ "Start a workout on Apple Watch": {
+  "zh-Hans": "在 Apple Watch 上开始体能训练",
+  "zh-Hant": "在 Apple Watch 上開始體能訓練"
+ },
  "Starts from a morning charge based on recovery and sleep, then drains with time awake, activity and elevated stress, and recharges a little during calm periods.": {
   "zh-Hans": "以基于恢复和睡眠的晨间电量为起点，随清醒时间、活动和较高压力而消耗，并在平静时段少量回充。",
   "zh-Hant": "以基於恢復和睡眠的晨間電量為起點，隨清醒時間、活動和較高壓力而消耗，並在平靜時段少量回充。"
@@ -947,6 +1023,10 @@
   "zh-Hans": "追光者",
   "zh-Hant": "追光者"
  },
+ "Swim": {
+  "zh-Hans": "游泳",
+  "zh-Hant": "游泳"
+ },
  "Take it easy today": {
   "zh-Hans": "今天放轻松",
   "zh-Hant": "今天放輕鬆"
@@ -971,6 +1051,10 @@
   "zh-Hans": "AI 教练使用你 iPhone 上的 Apple 智能：免费、私密，数据不会离开设备。外部助手为可选功能，默认关闭，仅在 Apple 智能不可用时使用。",
   "zh-Hant": "AI 教練使用你 iPhone 上的 Apple Intelligence：免費、私密，資料不會離開裝置。外部助手為選用功能，預設關閉，僅在 Apple Intelligence 無法使用時使用。"
  },
+ "The VitalFlow app isn't installed on your Apple Watch. Install it from the Watch app on iPhone → My Watch → Available Apps. (Free sideloaded installs usually can't include the watch app.)": {
+  "zh-Hans": "你的 Apple Watch 上还没有安装 VitalFlow。请在 iPhone 的 Watch App → 我的手表 → 可用的 App 中安装。（免费侧载通常无法包含手表 App。）",
+  "zh-Hant": "你的 Apple Watch 上還沒有安裝 VitalFlow。請在 iPhone 的 Watch App → 我的手錶 → 可用的 App 中安裝。（免費側載通常無法包含手錶 App。）"
+ },
  "The external assistant declined this request.": {
   "zh-Hans": "外部助手拒绝了此请求。",
   "zh-Hant": "外部助手拒絕了此請求。"
@@ -986,6 +1070,10 @@
  "This copy of VitalFlow can't use Apple Health": {
   "zh-Hans": "此版本的 VitalFlow 无法使用 Apple 健康",
   "zh-Hant": "此版本的 VitalFlow 無法使用 Apple 健康"
+ },
+ "This device can't connect to Apple Watch.": {
+  "zh-Hans": "此设备无法连接 Apple Watch。",
+  "zh-Hant": "此裝置無法連接 Apple Watch。"
  },
  "This device doesn't support HealthKit. You can explore VitalFlow with demo data in Settings.": {
   "zh-Hans": "此设备不支持 HealthKit。你可以在设置中使用演示数据体验 VitalFlow。",
@@ -1107,6 +1195,10 @@
   "zh-Hans": "醒来次数",
   "zh-Hant": "醒來次數"
  },
+ "Waking Apple Watch…": {
+  "zh-Hans": "正在唤醒 Apple Watch…",
+  "zh-Hant": "正在喚醒 Apple Watch…"
+ },
  "Walk": {
   "zh-Hans": "步行",
   "zh-Hant": "步行"
@@ -1194,6 +1286,18 @@
  "Workout": {
   "zh-Hans": "体能训练",
   "zh-Hant": "體能訓練"
+ },
+ "Workout & heart rate": {
+  "zh-Hans": "体能训练与心率",
+  "zh-Hant": "體能訓練與心率"
+ },
+ "Workout in progress": {
+  "zh-Hans": "体能训练进行中",
+  "zh-Hant": "體能訓練進行中"
+ },
+ "Workout saved to Apple Health from your watch.": {
+  "zh-Hans": "体能训练已由手表保存到 Apple 健康。",
+  "zh-Hant": "體能訓練已由手錶儲存到 Apple 健康。"
  },
  "Workouts": {
   "zh-Hans": "体能训练",

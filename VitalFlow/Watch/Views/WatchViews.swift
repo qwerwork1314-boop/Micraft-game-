@@ -78,6 +78,17 @@ struct HeartPage: View {
             if let d = model.latestHRDate {
                 Text(d, style: .relative).font(.caption2).foregroundStyle(.secondary)
             }
+            Button {
+                Task { await WorkoutManager.shared.startHeartCheck() }
+            } label: {
+                Label("Measure now", systemImage: "waveform.path.ecg")
+            }
+            .buttonStyle(.borderedProminent)
+            .tint(Brand.coral)
+            if let c = WorkoutManager.shared.lastHeartCheck {
+                Text(String(format: String(localized: "Last check: %d bpm"), Int(c.bpm)))
+                    .font(.caption2).foregroundStyle(.secondary)
+            }
             Divider()
             HStack {
                 Text("Resting").font(.caption2).foregroundStyle(.secondary)
@@ -164,6 +175,14 @@ struct LiveWorkoutView: View {
     @Environment(WorkoutManager.self) private var workout
 
     var body: some View {
+        if workout.mode == .heartCheck {
+            HeartCheckWatchView()
+        } else {
+            workoutBody
+        }
+    }
+
+    private var workoutBody: some View {
         TimelineView(.periodic(from: .now, by: 1)) { _ in
             VStack(alignment: .leading, spacing: 4) {
                 if let s = workout.startDate {
@@ -188,5 +207,30 @@ struct LiveWorkoutView: View {
             }
         }
         .padding(.horizontal)
+    }
+}
+
+struct HeartCheckWatchView: View {
+    @Environment(WorkoutManager.self) private var workout
+    @State private var pulse = false
+
+    var body: some View {
+        VStack(spacing: 8) {
+            ZStack {
+                ScoreRing(progress: workout.heartCheckProgress, color: Brand.coral, lineWidth: 6)
+                VStack(spacing: 0) {
+                    Image(systemName: "heart.fill")
+                        .foregroundStyle(Brand.coral)
+                        .scaleEffect(pulse ? 1.15 : 0.9)
+                        .animation(.easeInOut(duration: 0.5).repeatForever(autoreverses: true), value: pulse)
+                    Text(verbatim: workout.heartRate.map { String(Int($0)) } ?? "—")
+                        .font(.system(.title2, design: .rounded).weight(.semibold)).monospacedDigit()
+                }
+            }
+            .frame(width: 96, height: 96)
+            Text("Measuring… keep your wrist still").font(.caption2).multilineTextAlignment(.center)
+            Button(role: .cancel) { Task { await workout.end() } } label: { Text("Cancel") }
+        }
+        .onAppear { pulse = true }
     }
 }

@@ -9,6 +9,12 @@ struct DashboardView: View {
     @State private var showSettings = false
     @State private var detail: ScoreKind?
     @State private var showConnection = false
+    @State private var launcher: LauncherMode?
+
+    enum LauncherMode: String, Identifiable {
+        case browse, heartCheck
+        var id: String { rawValue }
+    }
 
     var body: some View {
         NavigationStack {
@@ -46,6 +52,10 @@ struct DashboardView: View {
             .vfBackground()
             .navigationTitle(Text(Date.now, format: .dateTime.weekday(.wide).day().month()))
             .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button { launcher = .browse } label: { Image(systemName: "figure.run.circle") }
+                        .accessibilityLabel(Text("Workout & heart rate"))
+                }
                 ToolbarItem(placement: .topBarTrailing) {
                     Button { showSettings = true } label: { Image(systemName: "gearshape") }
                         .accessibilityLabel(Text("Settings"))
@@ -54,6 +64,7 @@ struct DashboardView: View {
             .sheet(isPresented: $showSettings) { SettingsView() }
             .sheet(item: $detail) { kind in ScoreDetailView(kind: kind) }
             .sheet(isPresented: $showConnection) { NavigationStack { HealthConnectionView() } }
+            .sheet(item: $launcher) { mode in WorkoutLauncherView(startHeartCheckImmediately: mode == .heartCheck) }
             .task { model.persistDailyScores(context: context) }
         }
     }
@@ -162,9 +173,17 @@ struct DashboardView: View {
                     Spacer()
                     Text(verbatim: (Fmt.int(a.metrics.hrv).map { "\($0) ms" }) ?? "—").font(.subheadline.weight(.semibold).monospacedDigit())
                 }
+                Button {
+                    Haptics.tap()
+                    launcher = .heartCheck
+                } label: {
+                    Label("Measure", systemImage: "waveform.path.ecg").font(.caption.weight(.semibold)).frame(maxWidth: .infinity)
+                }
+                .buttonStyle(.bordered)
+                .tint(Brand.coral)
             }
         }
-        .accessibilityElement(children: .combine)
+        .accessibilityElement(children: .contain)
     }
 
     private func sleepCard(_ a: DailyAssessment) -> some View {

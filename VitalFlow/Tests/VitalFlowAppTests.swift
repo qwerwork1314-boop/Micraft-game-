@@ -60,3 +60,28 @@ final class SnapshotTests: XCTestCase {
         XCTAssertFalse(Suggestions.make(a, goals: GoalSet()).isEmpty)
     }
 }
+
+final class HeartCheckTests: XCTestCase {
+    func testResultIgnoresWarmUpAndUsesMedian() {
+        let start = Date()
+        var readings: [(Date, Double)] = [(start.addingTimeInterval(2), 110), (start.addingTimeInterval(5), 100)] // warm-up
+        for (i, v) in [64.0, 66, 65, 90, 63].enumerated() { readings.append((start.addingTimeInterval(12 + Double(i) * 4), v)) }
+        XCTAssertEqual(HeartCheck.result(from: readings, start: start), 65)
+    }
+
+    func testTooFewReadingsGiveNoResult() {
+        XCTAssertNil(HeartCheck.result(from: [(Date(), 70)], start: Date()))
+    }
+
+    func testHeartCheckConfigurationIsRecognised() {
+        XCTAssertTrue(HeartCheck.isHeartCheck(HeartCheck.configuration()))
+        let run = HKWorkoutConfiguration(); run.activityType = .running
+        XCTAssertFalse(HeartCheck.isHeartCheck(run))
+    }
+
+    func testPayloadRoundTrip() throws {
+        let p = LiveWorkoutPayload(heartRate: 72, averageHeartRate: 70, activeEnergy: 12, distance: 300, elapsed: 60,
+                                   heartCheckProgress: 0.5, heartCheckResult: nil)
+        XCTAssertEqual(try JSONDecoder().decode(LiveWorkoutPayload.self, from: JSONEncoder().encode(p)), p)
+    }
+}

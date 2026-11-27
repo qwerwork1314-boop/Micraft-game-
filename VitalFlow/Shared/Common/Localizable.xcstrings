@@ -507,6 +507,29 @@
         }
       }
     },
+    "Apple Watch didn't respond. Make sure it's on your wrist, unlocked and nearby, and that the VitalFlow watch app is installed.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Watch didn't respond. Make sure it's on your wrist, unlocked and nearby, and that the VitalFlow watch app is installed."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Watch 没有响应。请确认手表戴在手腕上、已解锁、在附近，并已安装 VitalFlow 手表 App。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Watch 沒有回應。請確認手錶戴在手腕上、已解鎖、在附近，並已安裝 VitalFlow 手錶 App。"
+          }
+        }
+      }
+    },
     "Ask Coach": {
       "extractionState": "manual",
       "localizations": {
@@ -1450,6 +1473,29 @@
         }
       }
     },
+    "Couldn't reach Apple Watch.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Couldn't reach Apple Watch."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法连接 Apple Watch。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "無法連接 Apple Watch。"
+          }
+        }
+      }
+    },
     "Couldn't save to Health. Check VitalFlow's write permission in the Health app.": {
       "extractionState": "manual",
       "localizations": {
@@ -1860,6 +1906,29 @@
           "stringUnit": {
             "state": "translated",
             "value": "示範模式已開啟。顯示的數值為合成資料，並非你的健康資料。"
+          }
+        }
+      }
+    },
+    "Distance": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Distance"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "距离"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "距離"
           }
         }
       }
@@ -2922,6 +2991,29 @@
         }
       }
     },
+    "Heart rate measured": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Heart rate measured"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "心率测量完成"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "心率測量完成"
+          }
+        }
+      }
+    },
     "Heart rate variability": {
       "extractionState": "manual",
       "localizations": {
@@ -2964,6 +3056,29 @@
           "stringUnit": {
             "state": "translated",
             "value": "高可信度"
+          }
+        }
+      }
+    },
+    "Hike": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hike"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "徒步"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "健行"
           }
         }
       }
@@ -3359,6 +3474,29 @@
         }
       }
     },
+    "Last check: %d bpm": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Last check: %d bpm"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "上次测量：%d 次/分"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "上次測量：%d 次/分"
+          }
+        }
+      }
+    },
     "Last night": {
       "extractionState": "manual",
       "localizations": {
@@ -3635,6 +3773,144 @@
         }
       }
     },
+    "Measure": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Measure"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "测量"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "測量"
+          }
+        }
+      }
+    },
+    "Measure again": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Measure again"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "再测一次"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "再測一次"
+          }
+        }
+      }
+    },
+    "Measure now": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Measure now"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "立即测量"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "立即測量"
+          }
+        }
+      }
+    },
+    "Measurements come from Apple Watch. iPhone has no heart-rate sensor; VitalFlow wakes the watch app for you, so you don't need to open it.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Measurements come from Apple Watch. iPhone has no heart-rate sensor; VitalFlow wakes the watch app for you, so you don't need to open it."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "测量数据来自 Apple Watch。iPhone 没有心率传感器；VitalFlow 会帮你唤醒手表 App，你不需要手动打开。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "測量資料來自 Apple Watch。iPhone 沒有心率感測器；VitalFlow 會幫你喚醒手錶 App，你不需要手動打開。"
+          }
+        }
+      }
+    },
+    "Measures for about 40 seconds on Apple Watch. Sit still with the watch snug on your wrist. The check isn't saved as a workout.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Measures for about 40 seconds on Apple Watch. Sit still with the watch snug on your wrist. The check isn't saved as a workout."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在 Apple Watch 上测量约 40 秒。请坐稳不动，并让手表贴紧手腕。这次测量不会被保存为体能训练。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在 Apple Watch 上測量約 40 秒。請坐好不動，並讓手錶貼緊手腕。這次測量不會被儲存為體能訓練。"
+          }
+        }
+      }
+    },
+    "Measuring… keep your wrist still": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Measuring… keep your wrist still"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在测量…请保持手腕不动"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在測量…請保持手腕不動"
+          }
+        }
+      }
+    },
     "Medium confidence": {
       "extractionState": "manual",
       "localizations": {
@@ -3888,6 +4164,29 @@
         }
       }
     },
+    "No Apple Watch is paired with this iPhone. Heart-rate checks and workout tracking need Apple Watch.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No Apple Watch is paired with this iPhone. Heart-rate checks and workout tracking need Apple Watch."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此 iPhone 没有配对 Apple Watch。心率测量和体能训练追踪需要 Apple Watch。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此 iPhone 沒有配對 Apple Watch。心率測量和體能訓練追蹤需要 Apple Watch。"
+          }
+        }
+      }
+    },
     "No Health data found": {
       "extractionState": "manual",
       "localizations": {
@@ -4022,6 +4321,29 @@
           "stringUnit": {
             "state": "translated",
             "value": "今天靜止狀態下的心率讀數還不夠。"
+          }
+        }
+      }
+    },
+    "Not enough readings. Make sure the watch is snug and try again.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not enough readings. Make sure the watch is snug and try again."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "读数不足。请确认手表贴紧手腕后再试一次。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "讀數不足。請確認手錶貼緊手腕後再試一次。"
           }
         }
       }
@@ -4256,6 +4578,29 @@
         }
       }
     },
+    "Pause": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pause"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "暂停"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "暫停"
+          }
+        }
+      }
+    },
     "Period": {
       "extractionState": "manual",
       "localizations": {
@@ -4371,6 +4716,29 @@
         }
       }
     },
+    "Quick heart rate": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quick heart rate"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "快速心率测量"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "快速心率測量"
+          }
+        }
+      }
+    },
     "Range": {
       "extractionState": "manual",
       "localizations": {
@@ -4436,6 +4804,29 @@
           "stringUnit": {
             "state": "translated",
             "value": "可以加強訓練"
+          }
+        }
+      }
+    },
+    "Recent heart checks": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recent heart checks"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "最近的心率测量"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "最近的心率測量"
           }
         }
       }
@@ -4689,6 +5080,29 @@
           "stringUnit": {
             "state": "translated",
             "value": "今天的靜息心率暫不可用。"
+          }
+        }
+      }
+    },
+    "Resume": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resume"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "继续"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "繼續"
           }
         }
       }
@@ -5291,6 +5705,29 @@
         }
       }
     },
+    "Start a workout on Apple Watch": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start a workout on Apple Watch"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在 Apple Watch 上开始体能训练"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在 Apple Watch 上開始體能訓練"
+          }
+        }
+      }
+    },
     "Starts from a morning charge based on recovery and sleep, then drains with time awake, activity and elevated stress, and recharges a little during calm periods.": {
       "extractionState": "manual",
       "localizations": {
@@ -5452,6 +5889,29 @@
         }
       }
     },
+    "Swim": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Swim"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "游泳"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "游泳"
+          }
+        }
+      }
+    },
     "Take it easy today": {
       "extractionState": "manual",
       "localizations": {
@@ -5590,6 +6050,29 @@
         }
       }
     },
+    "The VitalFlow app isn't installed on your Apple Watch. Install it from the Watch app on iPhone → My Watch → Available Apps. (Free sideloaded installs usually can't include the watch app.)": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The VitalFlow app isn't installed on your Apple Watch. Install it from the Watch app on iPhone → My Watch → Available Apps. (Free sideloaded installs usually can't include the watch app.)"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你的 Apple Watch 上还没有安装 VitalFlow。请在 iPhone 的 Watch App → 我的手表 → 可用的 App 中安装。（免费侧载通常无法包含手表 App。）"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "你的 Apple Watch 上還沒有安裝 VitalFlow。請在 iPhone 的 Watch App → 我的手錶 → 可用的 App 中安裝。（免費側載通常無法包含手錶 App。）"
+          }
+        }
+      }
+    },
     "The external assistant declined this request.": {
       "extractionState": "manual",
       "localizations": {
@@ -5678,6 +6161,29 @@
           "stringUnit": {
             "state": "translated",
             "value": "此版本的 VitalFlow 無法使用 Apple 健康"
+          }
+        }
+      }
+    },
+    "This device can't connect to Apple Watch.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This device can't connect to Apple Watch."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此设备无法连接 Apple Watch。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此裝置無法連接 Apple Watch。"
           }
         }
       }
@@ -6372,6 +6878,29 @@
         }
       }
     },
+    "Waking Apple Watch…": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Waking Apple Watch…"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在唤醒 Apple Watch…"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在喚醒 Apple Watch…"
+          }
+        }
+      }
+    },
     "Walk": {
       "extractionState": "manual",
       "localizations": {
@@ -6874,6 +7403,75 @@
           "stringUnit": {
             "state": "translated",
             "value": "體能訓練"
+          }
+        }
+      }
+    },
+    "Workout & heart rate": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Workout & heart rate"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "体能训练与心率"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "體能訓練與心率"
+          }
+        }
+      }
+    },
+    "Workout in progress": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Workout in progress"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "体能训练进行中"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "體能訓練進行中"
+          }
+        }
+      }
+    },
+    "Workout saved to Apple Health from your watch.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Workout saved to Apple Health from your watch."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "体能训练已由手表保存到 Apple 健康。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "體能訓練已由手錶儲存到 Apple 健康。"
           }
         }
       }
