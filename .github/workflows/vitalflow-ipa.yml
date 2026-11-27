@@ -1,0 +1,87 @@
+name: VitalFlow unsigned IPA (free sideloading)
+
+# Builds .ipa files that are NOT signed for distribution. They are meant to be signed and
+# installed by the user with their own free Apple ID using a sideloading tool such as
+# Sideloadly (Windows/macOS). No Apple Developer Program membership or secrets are needed.
+# Free-Apple-ID installs expire after 7 days and must be re-installed.
+
+on:
+  push:
+    branches: ["claude/vitalflow-health-app-fq5uk8"]
+    paths: ["VitalFlow/**", ".github/workflows/vitalflow-ipa.yml"]
+  workflow_dispatch:
+
+concurrency:
+  group: vitalflow-ipa-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    working-directory: VitalFlow
+
+jobs:
+  ipa:
+    runs-on: macos-15
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: latest-stable
+      - name: Generate Xcode project
+        run: brew install xcodegen && xcodegen generate
+      - name: Build for iPhone (unsigned)
+        run: |
+          set -o pipefail
+          xcodebuild build \
+            -project VitalFlow.xcodeproj -scheme VitalFlow -configuration Release \
+            -destination "generic/platform=iOS" \
+            -derivedDataPath build/dd \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" | xcpretty
+      - name: Embed entitlements (ad-hoc) and package IPAs
+        run: |
+          set -euo pipefail
+          APP=build/dd/Build/Products/Release-iphoneos/VitalFlow.app
+          test -d "$APP"
+          echo "App bundle contents:"; find "$APP" -maxdepth 4 \( -name "*.app" -o -name "*.appex" \)
+
+          # Only HealthKit is requested; App Groups/background delivery are left out because
+          # free Apple IDs cannot use a group identifier they don't own. The app falls back
+          # to standard storage (widgets then show no data).
+          cat > "$RUNNER_TEMP/health.plist" <<'PLIST'
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+          <plist version="1.0"><dict>
+            <key>com.apple.developer.healthkit</key><true/>
+            <key>com.apple.developer.healthkit.access</key><array/>
+          </dict></plist>
+          PLIST
+
+          # Sign nested bundles first (extensions, watch app), then the main app.
+          find "$APP" -name "*.appex" -print0 | while IFS= read -r -d '' x; do codesign -f -s - "$x"; done
+          if [ -d "$APP/Watch" ]; then
+            find "$APP/Watch" -maxdepth 1 -name "*.app" -print0 | while IFS= read -r -d '' w; do
+              codesign -f -s - --entitlements "$RUNNER_TEMP/health.plist" "$w"
+            done
+          fi
+          codesign -f -s - --entitlements "$RUNNER_TEMP/health.plist" "$APP"
+
+          mkdir -p out
+          # 1) Full: iPhone app + widgets + Apple Watch app.
+          rm -rf pkg && mkdir -p pkg/Payload && cp -R "$APP" pkg/Payload/
+          (cd pkg && zip -qry ../out/VitalFlow-full-unsigned.ipa Payload)
+          # 2) iPhone only: no Watch app and no widgets (fewest app IDs; most likely to work
+          #    with a free Apple ID).
+          rm -rf pkg && mkdir -p pkg/Payload && cp -R "$APP" pkg/Payload/
+          rm -rf pkg/Payload/VitalFlow.app/Watch pkg/Payload/VitalFlow.app/PlugIns
+          codesign -f -s - --entitlements "$RUNNER_TEMP/health.plist" pkg/Payload/VitalFlow.app
+          (cd pkg && zip -qry ../out/VitalFlow-iphone-only-unsigned.ipa Payload)
+          ls -lh out
+      - uses: actions/upload-artifact@v4
+        with:
+          name: VitalFlow-unsigned-ipa
+          path: VitalFlow/out/*.ipa
+          retention-days: 30
