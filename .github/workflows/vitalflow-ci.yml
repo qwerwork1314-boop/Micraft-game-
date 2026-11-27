@@ -22,15 +22,18 @@ jobs:
   core-linux:
     name: Core algorithms (Linux)
     runs-on: ubuntu-latest
+    container: swift:6.1
     steps:
       - uses: actions/checkout@v4
-      - uses: swift-actions/setup-swift@v2
-        with:
-          swift-version: "6.0"
       - name: Unit tests (VitalFlowCore)
         run: swift test --package-path Packages/VitalFlowCore
-      - name: Localization coverage (en / zh-Hans / zh-Hant)
-        run: python3 scripts/build_strings.py --check
+
+  localization:
+    name: Localization coverage (en / zh-Hans / zh-Hant)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/build_strings.py --check
 
   apple:
     name: iOS + watchOS build & test (macOS)

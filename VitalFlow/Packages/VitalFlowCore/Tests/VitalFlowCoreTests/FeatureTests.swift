@@ -125,3 +125,22 @@ final class AssistantTests: XCTestCase {
         XCTAssertTrue(a.quantities.allSatisfy { $0.start <= now })
     }
 }
+
+final class PerformanceTests: XCTestCase {
+    /// The app aggregates a full year (365 days) on refresh; keep it fast.
+    func testYearOfDemoDataAggregatesQuickly() {
+        let cal = TestCal.calendar()
+        let now = TestCal.date(2026, 6, 1, 18)
+        let ds = DemoDataGenerator.generate(days: 366, endingAt: now, calendar: cal)
+        let today = DayKey(now, calendar: cal)
+        let days = (0..<365).map { today.adding(days: -364 + $0, calendar: cal) }
+        let start = Date()
+        let h = DailyAggregator(calendar: cal).aggregate(days: days, quantities: ds.quantities, sleep: ds.sleep,
+                                                         workouts: ds.workouts, profile: ScoringProfile())
+        let elapsed = Date().timeIntervalSince(start)
+        XCTAssertEqual(h.count, 365)
+        XCTAssertGreaterThan(h.compactMap(\.sleep).count, 350)
+        XCTAssertLessThan(elapsed, 20, "debug build aggregation took \(elapsed)s")
+        print("Aggregated 365 days in \(elapsed)s")
+    }
+}
