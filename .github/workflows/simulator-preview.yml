@@ -1,0 +1,141 @@
+name: VitalFlow simulator preview
+
+# This file is on a non-default branch. Its first commit starts the preview
+# automatically, without workflow_dispatch or any changes to the default branch.
+on:
+  push:
+    branches: [claude/vitalflow-health-app-fq5uk8]
+    paths: ['.github/workflows/simulator-preview.yml']
+
+permissions:
+  contents: read
+
+concurrency:
+  group: vitalflow-simulator-preview-${{ github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+    working-directory: VitalFlow
+
+jobs:
+  screenshot:
+    name: Capture iPhone demo dashboard
+    runs-on: macos-15
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: latest-stable
+
+      - name: Enable demo mode in this simulator build only
+        run: |
+          # Change only the runner's temporary checkout. Fail clearly if the app's
+          # source changes; never commit this preview hook to the Swift sources.
+          python3 - <<'PY'
+          from pathlib import Path
+          from textwrap import dedent, indent
+
+          def insert_after(path, anchor, code, spaces):
+              source = Path(path)
+              content = source.read_text(encoding='utf-8')
+              if content.count(anchor) != 1:
+                  raise SystemExit(f'Preview source anchor changed: {path}')
+              code = indent(dedent(code).strip('\n'), ' ' * spaces)
+              source.write_text(content.replace(anchor, f'{anchor}\n{code}', 1), encoding='utf-8')
+
+          insert_after('iOS/App/AppModel.swift', '    static func load() -> UserSettings {', '''
+              #if targetEnvironment(simulator)
+              if ProcessInfo.processInfo.arguments.contains("--vitalflow-ci-demo") {
+                  var preview = UserSettings()
+                  preview.onboarded = true
+                  preview.demoMode = true
+                  return preview
+              }
+              #endif
+          ''', 8)
+
+          dashboard = 'iOS/Features/Dashboard/DashboardView.swift'
+          insert_after(dashboard, 'import SwiftData', 'import Foundation', 0)
+          insert_after(dashboard, '                        hero(a)', '''
+              .onAppear {
+                  #if targetEnvironment(simulator)
+                      guard a.isDemo, ProcessInfo.processInfo.arguments.contains("--vitalflow-ci-demo") else { return }
+                      let marker = FileManager.default.temporaryDirectory.appendingPathComponent("vitalflow-preview.ready")
+                      try? Data("ready".utf8).write(to: marker, options: .atomic)
+                  #endif
+              }
+          ''', 28)
+          PY
+
+      - name: Generate Xcode project
+        run: |
+          brew install xcodegen
+          xcodegen generate
+
+      - name: Pick an available iPhone simulator
+        id: simulator
+        run: |
+          xcrun simctl list devices available -j | python3 -c '
+          import json, sys
+          devices = json.load(sys.stdin)["devices"]
+          ios = {runtime: models for runtime, models in devices.items() if ".iOS-" in runtime}
+          version = lambda runtime: tuple(map(int, runtime.rsplit(".iOS-", 1)[-1].split("-")))
+          for runtime in sorted(ios, key=version, reverse=True):
+              for model in ios[runtime]:
+                  if model["name"].startswith("iPhone") and model.get("isAvailable", True):
+                      print("udid=" + model["udid"])
+                      sys.exit(0)
+          sys.exit("No available iPhone simulator on this runner.")
+          ' >> "$GITHUB_OUTPUT"
+
+      - name: Build the iPhone simulator app without signing
+        env:
+          SIMULATOR_UDID: ${{ steps.simulator.outputs.udid }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/vitalflow-preview"
+          if ! xcodebuild build -project VitalFlow.xcodeproj -scheme VitalFlow \
+            -configuration Debug -destination "id=$SIMULATOR_UDID" \
+            -derivedDataPath "$RUNNER_TEMP/vitalflow-derived" CODE_SIGNING_ALLOWED=NO \
+            > "$RUNNER_TEMP/vitalflow-preview/build.log" 2>&1; then
+            tail -n 150 "$RUNNER_TEMP/vitalflow-preview/build.log"
+            exit 1
+          fi
+
+      - name: Launch with demo data and capture the dashboard
+        env:
+          SIMULATOR_UDID: ${{ steps.simulator.outputs.udid }}
+        run: |
+          app="$RUNNER_TEMP/vitalflow-derived/Build/Products/Debug-iphonesimulator/VitalFlow.app"
+          bundle_id=$(/usr/libexec/PlistBuddy -c 'Print :CFBundleIdentifier' "$app/Info.plist")
+          xcrun simctl bootstatus "$SIMULATOR_UDID" -b
+          xcrun simctl install "$SIMULATOR_UDID" "$app"
+          container=$(xcrun simctl get_app_container "$SIMULATOR_UDID" "$bundle_id" data)
+          marker="$container/tmp/vitalflow-preview.ready"
+          rm -f "$marker"
+          xcrun simctl status_bar "$SIMULATOR_UDID" override --time '9:41' --dataNetwork wifi --wifiMode active --wifiBars 3 --cellularMode active --cellularBars 4 --batteryState unplugged --batteryLevel 100 || true
+          xcrun simctl launch "$SIMULATOR_UDID" "$bundle_id" --vitalflow-ci-demo -AppleLanguages '(zh-Hans)' -AppleLocale zh_CN
+          for ((attempt=0; attempt<45; attempt++)); do
+            [[ -s "$marker" ]] && break
+            sleep 2
+          done
+          if [[ ! -s "$marker" ]]; then
+            echo '::error::VitalFlow did not display the populated demo dashboard within 90 seconds.'
+            exit 1
+          fi
+          # Let SwiftUI's initial dashboard animation finish before capturing.
+          sleep 2
+          xcrun simctl io "$SIMULATOR_UDID" screenshot "$RUNNER_TEMP/vitalflow-preview/VitalFlow-iPhone.png"
+
+      - name: Upload VitalFlow iPhone screenshot
+        uses: actions/upload-artifact@v4
+        with:
+          name: VitalFlow-iPhone-preview
+          path: ${{ runner.temp }}/vitalflow-preview/VitalFlow-iPhone.png
+          if-no-files-found: error
+          retention-days: 7
